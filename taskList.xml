@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="no"?>
+<TaskList>
+    <Task>
+        <PriorCat>A</PriorCat>
+        <Priority>1</Priority>
+        <TaskName>Debug 2</TaskName>
+        <TaskComment>Betöltés javítása</TaskComment>
+        <TaskIsFinished>false</TaskIsFinished>
+    </Task>
+    <Task>
+        <PriorCat>A</PriorCat>
+        <Priority>2</Priority>
+        <TaskName>JUnit</TaskName>
+        <TaskComment>unit teszt az XML-hez</TaskComment>
+        <TaskIsFinished>false</TaskIsFinished>
+    </Task>
+    <Task>
+        <PriorCat>A</PriorCat>
+        <Priority>3</Priority>
+        <TaskName>Követelmények</TaskName>
+        <TaskComment/>
+        <TaskIsFinished>false</TaskIsFinished>
+    </Task>
+    <Task>
+        <PriorCat>A</PriorCat>
+        <Priority>4</Priority>
+        <TaskName>Convergence</TaskName>
+        <TaskComment/>
+        <TaskIsFinished>false</TaskIsFinished>
+    </Task>
+    <Task>
+        <PriorCat>B</PriorCat>
+        <Priority>1</Priority>
+        <TaskName>Befejezett lista</TaskName>
+        <TaskComment/>
+        <TaskIsFinished>false</TaskIsFinished>
+    </Task>
+    <Task>
+        <PriorCat>B</PriorCat>
+        <Priority>2</Priority>
+        <TaskName>Befejeztt lista 2</TaskName>
+        <TaskComment>Lista ürítése</TaskComment>
+        <TaskIsFinished>false</TaskIsFinished>
+    </Task>
+    <Task>
+        <PriorCat>B</PriorCat>
+        <Priority>3</Priority>
+        <TaskName>Befejezett lista 3</TaskName>
+        <TaskComment>Befejezett feladatok számának mutatása</TaskComment>
+        <TaskIsFinished>false</TaskIsFinished>
+    </Task>
+    <Task>
+        <PriorCat>B</PriorCat>
+        <Priority>4</Priority>
+        <TaskName>Kurzor</TaskName>
+        <TaskComment>Hozzá adás után a feladat névnél legyen a kurzor</TaskComment>
+        <TaskIsFinished>false</TaskIsFinished>
+    </Task>
+    <Task>
+        <PriorCat>B</PriorCat>
+        <Priority>5</Priority>
+        <TaskName>Tooltip</TaskName>
+        <TaskComment>Megjegyzés mutatása ha túl hosszú</TaskComment>
+        <TaskIsFinished>false</TaskIsFinished>
+    </Task>
+    <Task>
+        <PriorCat>B</PriorCat>
+        <Priority>6</Priority>
+        <TaskName>Tooltip 2</TaskName>
+        <TaskComment>Kategóra fölött az egér: mik azok, eljön: Feladatok számának mutatása</TaskComment>
+        <TaskIsFinished>false</TaskIsFinished>
+    </Task>
+    <Task>
+        <PriorCat>B</PriorCat>
+        <Priority>7</Priority>
+        <TaskName>Dátumozható feladatok</TaskName>
+        <TaskComment/>
+        <TaskIsFinished>false</TaskIsFinished>
+    </Task>
+    <Task>
+        <PriorCat>C</PriorCat>
+        <Priority>1</Priority>
+        <TaskName>JTable</TaskName>
+        <TaskComment/>
+        <TaskIsFinished>false</TaskIsFinished>
+    </Task>
+    <Task>
+        <PriorCat>C</PriorCat>
+        <Priority>2</Priority>
+        <TaskName>Kategória a feladatokhoz</TaskName>
+        <TaskComment/>
+        <TaskIsFinished>false</TaskIsFinished>
+    </Task>
+</TaskList>
