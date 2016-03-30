@@ -3,7 +3,7 @@ package MyGoal;
 import java.awt.EventQueue;
 
 import javax.swing.JFrame;
-import net.miginfocom.swing.MigLayout;
+//import net.miginfocom.swing.MigLayout;
 import javax.swing.Box;
 import javax.swing.JScrollPane;
 import javax.swing.JLabel;
@@ -14,13 +14,12 @@ import javax.swing.JMenuItem;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 
-import Task.SimplyTaskList;
+import SimplyTaskList;
 
 import javax.swing.JComboBox;
 import javax.swing.JTextField;
 import java.awt.Component;
 import javax.swing.JSeparator;
-import javax.swing.SwingConstants;
 import javax.swing.JButton;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
@@ -41,6 +40,7 @@ public class GWin03 {
 	private JTextField textFieldPriorMod;
 	private JTextField textFieldTaskNameMod;
 	private JTextField textFieldTaskCommentMod;
+	private JComboBox<String> comboBoxPriorCat;
 
 	/**
 	 * Launch the application.
@@ -105,7 +105,7 @@ public class GWin03 {
 		JLabel lblPriority = new JLabel("                    Priority        ");
 		frmGwin.getContentPane().add(lblPriority, "cell 0 0");
 		
-		JComboBox comboBoxPriorCat = new JComboBox();
+		comboBoxPriorCat = new JComboBox<String>();
 		comboBoxPriorCat.setMaximumRowCount(10);
 		frmGwin.getContentPane().add(comboBoxPriorCat, "cell 0 1");
 		
@@ -140,7 +140,7 @@ public class GWin03 {
 		JLabel lblCommentsomeInformation = new JLabel("   Comment (some information about the task)");
 		frmGwin.getContentPane().add(lblCommentsomeInformation, "cell 0 0");
 		
-		JComboBox comboBoxPriorCatMod = new JComboBox();
+		JComboBox<String> comboBoxPriorCatMod = new JComboBox<String>();
 		frmGwin.getContentPane().add(comboBoxPriorCatMod, "cell 0 8");
 		
 		//Filling up the comboboxes with the possible categories.
@@ -350,7 +350,7 @@ public class GWin03 {
 	 * 
 	 * @param cbox The combobox what will contain the the categories.
 	 */
-	public void fillCat(JComboBox cbox){
+	public void fillCat(JComboBox<String> cbox){
 		for (String boxItem : tasks.getPriorityCategories()) {
 			cbox.addItem(boxItem);
 		}

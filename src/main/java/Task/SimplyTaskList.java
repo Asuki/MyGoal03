@@ -136,32 +136,6 @@ public class SimplyTaskList {
 		}
 	}
 	
-	/*
-	 * Changes a task's priority category. If the new category is higher than the older, the task will have the worst (highest value) priority in the new category. If the new category is lower than the old one, the task will be the first in that.
-	 * 
-	 * @param taskName The name of the task what's priority category we want to change.
-	 * @param newPriorCat The new priority category we want to use. It can be: "A", "B" or "C".
-	 */
-	/*public void changePriorCat(String taskName, String newPriorCat){
-		Integer taskIndex = getTaskIndex(taskName);
-		if (taskIndex == -1)
-			return;
-		Integer newCatIndex = priorityCategories.indexOf(newPriorCat);
-		Integer oldCatIndex = priorityCategories.indexOf(priorCat.get(taskIndex));
-		if (oldCatIndex == newCatIndex)
-			return;
-		if (newCatIndex > oldCatIndex) {
-			for (int i = 0; i < this.priority.size(); i++) {
-				if (this.priorCat.get(i) == newPriorCat)
-					priority.set(i, priority.get(i) + 1);
-			}
-			priority.set(taskIndex, 1);
-		}
-		else
-			priority.set(taskIndex, getLastPriorityInCategory(newPriorCat) + 1);
-		priorCat.set(taskIndex, newPriorCat);
-	}*/
-	
 	/**
 	 * Gives the last priority value of the given priority category.
 	 * 
@@ -250,14 +224,14 @@ public class SimplyTaskList {
 					Integer lastLower = getLastIndexOfCategory(priorityCategories.get(indexTmp));
 					//Increasing all of the task's priority with equal or higher priority.
 					for (int i = 0; i < priority.size(); i++) {
-						if (priority.get(i) >= prior && pcat == priorCat.get(i))
+						if (priority.get(i) >= prior && pcat.equals(priorCat.get(i)))
 							priority.set(i, priority.get(i) + 1);
-						if (priorCat.get(i) == pcat && priority.get(i) < prior){
+						if ( pcat.equals(priorCat.get(i)) && priority.get(i) < prior){
 							lastLower = i;
 						}
 					}
 					//Inserting the task, its priority and category into the right place.
-					lastLower = (pcat == priorityCategories.get(0) && 1 == prior) ? 0 : lastLower + 1;
+					lastLower = (pcat.equals(priorityCategories.get(0)) && 1 == prior) ? 0 : lastLower + 1;
 					tasks.add(lastLower, new SimplyTask(task));
 					tasks.get(lastLower).setComment(comment);
 					priorCat.add(lastLower, pcat);
@@ -315,14 +289,29 @@ public class SimplyTaskList {
 	}
 	
 	/**
-	 * Gives the index of the next category from the priorityCategories list.
+	 * Gives the index of the next category used from the possible category list.
+	 * 
+	 * <pre>
+	 * The catIndex stores the index of the given category.
+	 * {@code 
+	 * int catIndex = priorityCategories.indexOf(cat);
+	 * }
+	 * 
+	 * Looping through the possible categories and find the lowest possible next index.
+	 * {@code 
+	 * for (int i = isUsedCat.size() - 1; i >= 0 && catIndex != i; i++) {
+	 *		if (isUsedCat.get(i) != 0 && i > catIndex)
+	 *			result = i;
+	 *	}
+	 * }
+	 *</pre>
 	 * 
 	 * @param cat The category what's next we search.
 	 * @return The index of the next category and -1 otherwise.
 	 */
-	private Integer getNextCatIndex(String cat){
-		Integer catIndex = priorityCategories.indexOf(cat);
-		Integer result = isUsedCat.size() - 1;
+	public int getNextCatIndex(String cat){
+		int catIndex = priorityCategories.indexOf(cat);
+		int result = isUsedCat.size() - 1;
 		for (int i = isUsedCat.size() - 1; i >= 0 && catIndex != i; i++) {
 			if (isUsedCat.get(i) != 0 && i > catIndex)
 				result = i;
@@ -372,7 +361,7 @@ public class SimplyTaskList {
 	public int getLastIndexOfCategory(String category){
 		int result = -1;
 		for (int i = 0; i < priorCat.size(); i++) {
-			if (priorCat.get(i) == category)
+			if (category.equals(priorCat.get(i)))
 				result = i;
 		}
 		return result;
@@ -549,9 +538,11 @@ public class SimplyTaskList {
 		        task.appendChild(taskComment);
 		        taskComment.appendChild(doc.createTextNode(tasks.get(i).getComment()));
 		        
+		        /*
 		        Element taskIsFinished = doc.createElement("TaskIsFinished");
 		        task.appendChild(taskIsFinished);
 		        taskIsFinished.appendChild(doc.createTextNode(String.valueOf(tasks.get(i).getIsFinished())));
+		        */
 		        
 			}
 
@@ -591,7 +582,6 @@ public class SimplyTaskList {
 	 */
 	public void loadXML(){
 		 try {
-
 				File fXmlFile = new File(XMLFile);
 				DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
 				DocumentBuilder dBuilder = dbFactory.newDocumentBuilder();
@@ -608,19 +598,26 @@ public class SimplyTaskList {
 					if (nNode.getNodeType() == Node.ELEMENT_NODE) {
 
 						Element eElement = (Element) nNode;
+						String pcat = eElement.getElementsByTagName("PriorCat").item(0).getTextContent();
+						int prior = Integer.parseInt(eElement.getElementsByTagName("Priority").item(0).getTextContent());
+						String taskName = eElement.getElementsByTagName("TaskName").item(0).getTextContent();
+						String comment = eElement.getElementsByTagName("TaskComment").item(0).getTextContent();
+						addTask(pcat, prior, taskName, comment);
+						
+						/*
 						priorCat.add(eElement.getElementsByTagName("PriorCat").item(0).getTextContent());
 						priority.add(Integer.parseInt(eElement.getElementsByTagName("Priority").item(0).getTextContent()));
 						tasks.add(new SimplyTask(eElement.getElementsByTagName("TaskName").item(0).getTextContent()));
 						tasks.get(temp).setComment(eElement.getElementsByTagName("TaskComment").item(0).getTextContent());
 						if ("true".equals(eElement.getElementsByTagName("TaskIsFinished").item(0).getTextContent()))
 							tasks.get(temp).setIsFinished(true);
+							*/
 					}
 				}
 				isUsedCat.size();
-				checkUsedCategories();
-				int x;
-				x = 1;
-				x = x+1;
+				//checkUsedCategories();
+				int x = 1;
+				x = x + 3;
 		 } catch (Exception e) {
 				e.printStackTrace();
 		 }
