@@ -3,7 +3,7 @@ package MyGoal;
 import java.awt.EventQueue;
 
 import javax.swing.JFrame;
-//import net.miginfocom.swing.MigLayout;
+import net.miginfocom.swing.MigLayout;
 import javax.swing.Box;
 import javax.swing.JScrollPane;
 import javax.swing.JLabel;
@@ -14,7 +14,7 @@ import javax.swing.JMenuItem;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 
-import SimplyTaskList;
+import Task.SimplyTaskList;
 
 import javax.swing.JComboBox;
 import javax.swing.JTextField;

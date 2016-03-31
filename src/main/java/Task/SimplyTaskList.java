@@ -4,6 +4,7 @@ import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.LinkedList;
+import java.util.logging.Logger;
 
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
@@ -60,6 +61,7 @@ public class SimplyTaskList {
 	 * Stores information about the categories.
 	 */
 	String categoryInfo;
+	Logger	logger;
 	String XMLFile;
 	 
 	/**
@@ -82,6 +84,7 @@ public class SimplyTaskList {
 			isUsedCat.add(0);
 		}
 		XMLFile = "taskList.xml";
+		logger =  Logger.getLogger(SimplyTaskList.class.getName());
 	}
 	
 
@@ -92,6 +95,7 @@ public class SimplyTaskList {
 	 * @return true if the remove was successful and the active list had contained the task. Return false otherwise. 
 	 */
 	public boolean FinishTask(int taskIndex){
+		logger.entering("SimplyTaskList", "FinishTask", new Object[] {taskIndex});
 		//tasks.get(taskIndex).setFinished(true);
 		//return true;
 		if (taskIndex >= 0 && taskIndex < tasks.size()){
@@ -102,10 +106,14 @@ public class SimplyTaskList {
 			priorCat.remove(priorCat.get(taskIndex));
 			priority.remove(taskIndex);
 			reorderTasksAfterRemove(catTmp, priorTmp);
+			logger.info("Task with then taskIndex: " + taskIndex + " was succesful.");
+			logger.exiting("SimplyTaskList", "FinishTask", true);
 			return true;
 		}
-		else
+		else{
+			logger.exiting("SimplyTaskList", "FinishTask", false);
 			return false;
+		}
 	}
 	
 	/**
@@ -115,10 +123,16 @@ public class SimplyTaskList {
 	 * @return the index of the task if it is in the active task list and -1 otherwise.
 	 */
 	public int getTaskIndex(String taskName){
+		logger.entering("SimplyTaskList", "getTaskIndex", new Object[] {taskName});
 		for (int result = 0; result < tasks.size(); result++) {
-			if (taskName.equals(this.tasks.get(result).taskName))
+			if (taskName.equals(this.tasks.get(result).taskName)){
+				logger.info("Task index found: " + result);
+				logger.exiting("SimplyTaskList", "getTaskIndex", result);
 				return result;
+			}
 		}
+		logger.info("Task index did not find.");
+		logger.exiting("SimplyTaskList", "getTaskIndex", -1);
 		return -1;
 	}
 	
@@ -129,11 +143,14 @@ public class SimplyTaskList {
 	 * @param priority The removed element's priority.
 	 */
 	protected void reorderTasksAfterRemove(String priorCat, Integer priority){
+		logger.entering("SimplyTaskList", "reorderTasksAfterRemove", new Object[] {priorCat, priority});
 		for (int i = 0; i < this.priority.size(); i++) {
 			Integer value = this.priority.get(i);
 			if (value > priority && priorCat.equals(this.priorCat.get(i))) 
 				this.priority.set(i, value - 1);
 		}
+		logger.info("Priorities was added successful");
+		logger.exiting("SimplyTaskList", "reorderTasksAfterRemove");
 	}
 	
 	/**
@@ -143,12 +160,15 @@ public class SimplyTaskList {
 	 * @return The last element of the priority category.
 	 */
 	public int getLastPriorityInCategory(String priorCat){
+		logger.entering("SimplyTaskList", "getLastPriorityInCategory", new Object[] {priorCat});
 		int max = 0;
 		int priorTmp;
 		for (int i = 0; i < this.priorCat.size(); i++) {
 			if (priorCat == this.priorCat.get(i) && max < (priorTmp = priority.get(i)))
 				max = priorTmp;
 		}
+		logger.info("The category (" + priorCat + "found: " + max);
+		logger.exiting("SimplyTaskList", "getLastPriorityInCategory", max);
 		return max;
 	}
 	
@@ -159,10 +179,16 @@ public class SimplyTaskList {
 	 * @return true if the task is finished and false otherwise.
 	 */
 	public boolean isFinished(String taskName){
+		logger.entering("SimplyTaskList", "isFinished", new Object[] {taskName});
 		for (SimplyTask task : finishedTasks) {
-			if (taskName.equals(task.taskName)) 
+			if (taskName.equals(task.taskName)) {
+				logger.info("The task is finished: " + taskName);
+				logger.exiting("SimplyTaskList", "isFinished", true);
 				return true;
+			}
 		}
+		logger.info("The task is not finished: " + taskName);
+		logger.exiting("SimplyTaskList", "isFinished", false);
 		return false;
 	}
 	
@@ -179,10 +205,15 @@ public class SimplyTaskList {
 	 * @return the name of the tasks
 	 */
 	public LinkedList<String> getFinishedTaskNames(){
+		logger.entering("SimplyTaskList", "getFinishedTaskNames");
 		LinkedList<String> result = new LinkedList<String>();
+		String loggerString = "";
 		for (SimplyTask task : finishedTasks) {
 			result.add(task.taskName);
+			loggerString += task.taskName + " ";
 		}
+		logger.info("Task names collected");
+		logger.exiting("SimplyTaskList", "getFinishedTaskNames", loggerString);
 		return result;
 	}
 	 
@@ -194,11 +225,16 @@ public class SimplyTaskList {
 	 * @return True if the name change was successful and false if it is failed.
 	 */
 	public boolean setTaskName (String oldName, String newName){
+		logger.entering("SimlyTaskList", "setTaskName", new Object [] {oldName, newName});
 		 int taskIndex;
 		 if ((taskIndex = getTaskIndex(oldName)) != -1 && getTaskIndex(newName) == -1){
 			 tasks.get(taskIndex).setTaskName(newName);
+			 logger.info("Task name modified from " + oldName + "to " + newName);
+			 logger.exiting("SimplyTaskList", "setTaskName", true);
 			 return true;
 		 }
+		 logger.info("Task name was not modified because the task name is already exists");
+		 logger.exiting("SimplyTaskList", "setTaskName", false);
 		 return false;
 	 }
 	
@@ -212,12 +248,15 @@ public class SimplyTaskList {
 	 * @return true if adding was successful and false otherwise
 	 */
 	public boolean addTask(String pcat, Integer prior, String task, String comment) {
+		logger.entering("SimlyTaskList", "addTask", new Object [] {pcat, prior, task, comment});
 		if(-1 == getTaskIndex(task))
 		{
+			logger.info("Task name does not exists. Adding starts");
 			//It checks if has task in the list
 			if (tasks.size() > 0){
 				//If the category of the new task is exists
 				if (isUsedCategory(pcat)){
+					logger.info("Adding a task with am existing prority");
 					//Sets the previous category's last priority index
 					Integer indexTmp = getPrevCatIndex(pcat);
 					indexTmp = indexTmp < 0 ? 0 : indexTmp;
@@ -236,9 +275,12 @@ public class SimplyTaskList {
 					tasks.get(lastLower).setComment(comment);
 					priorCat.add(lastLower, pcat);
 					priority.add(lastLower, prior);
+					logger.fine("New priority category was successful created: " + pcat);
+					logger.fine("The new task was successful added: " + task);
 				}
 				//If the category of the new task does not exists
 				else{
+					logger.info("Adding a task with new prority");
 					Integer indexTmp = priorityCategories.indexOf(pcat);
 					isUsedCat.set(indexTmp, 1);
 					Integer catIndexTmp;
@@ -257,15 +299,18 @@ public class SimplyTaskList {
 						priorCat.add(addIndextmp, pcat);
 						priority.add(addIndextmp, prior);
 					}
+					logger.fine("Task successful inserted into the " + pcat + " category");
 				}
 			}
 			//If there is no item in the list
 			else{
+				logger.info("Adding the first element");
 				tasks.addFirst(new SimplyTask(task));
 				priorCat.addFirst(pcat);
 				priority.addFirst(prior);
 				isUsedCat.set(priorityCategories.indexOf(pcat), 1);
 				tasks.getFirst().setComment(comment);
+				logger.fine("Adding the first element was successful");
 			}
 			return true;
 		}
@@ -291,7 +336,6 @@ public class SimplyTaskList {
 	/**
 	 * Gives the index of the next category used from the possible category list.
 	 * 
-	 * <pre>
 	 * The catIndex stores the index of the given category.
 	 * {@code 
 	 * int catIndex = priorityCategories.indexOf(cat);
@@ -304,7 +348,6 @@ public class SimplyTaskList {
 	 *			result = i;
 	 *	}
 	 * }
-	 *</pre>
 	 * 
 	 * @param cat The category what's next we search.
 	 * @return The index of the next category and -1 otherwise.
@@ -582,6 +625,8 @@ public class SimplyTaskList {
 	 */
 	public void loadXML(){
 		 try {
+
+				//InputStream	fXmlFile = SimplyTaskList.class.getResourceAsStream(XMLFile);
 				File fXmlFile = new File(XMLFile);
 				DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
 				DocumentBuilder dBuilder = dbFactory.newDocumentBuilder();
@@ -603,15 +648,6 @@ public class SimplyTaskList {
 						String taskName = eElement.getElementsByTagName("TaskName").item(0).getTextContent();
 						String comment = eElement.getElementsByTagName("TaskComment").item(0).getTextContent();
 						addTask(pcat, prior, taskName, comment);
-						
-						/*
-						priorCat.add(eElement.getElementsByTagName("PriorCat").item(0).getTextContent());
-						priority.add(Integer.parseInt(eElement.getElementsByTagName("Priority").item(0).getTextContent()));
-						tasks.add(new SimplyTask(eElement.getElementsByTagName("TaskName").item(0).getTextContent()));
-						tasks.get(temp).setComment(eElement.getElementsByTagName("TaskComment").item(0).getTextContent());
-						if ("true".equals(eElement.getElementsByTagName("TaskIsFinished").item(0).getTextContent()))
-							tasks.get(temp).setIsFinished(true);
-							*/
 					}
 				}
 				isUsedCat.size();

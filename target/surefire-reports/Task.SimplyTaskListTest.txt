@@ -1,0 +1,78 @@
+-------------------------------------------------------------------------------
+Test set: Task.SimplyTaskListTest
+-------------------------------------------------------------------------------
+Tests run: 17, Failures: 17, Errors: 0, Skipped: 0, Time elapsed: 0.078 sec <<< FAILURE!
+Task.SimplyTaskListTest.testSetListName()  Time elapsed: 0.049 sec  <<< FAILURE!
+java.lang.NoClassDefFoundError: org/junit/Assert
+	at Task.SimplyTaskListTest.testSetListName(SimplyTaskListTest.java:180)
+Caused by: java.lang.ClassNotFoundException: org.junit.Assert
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:381)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:424)
+	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:331)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:357)
+	... 19 more
+
+Task.SimplyTaskListTest.testSetTaskName()  Time elapsed: 0 sec  <<< FAILURE!
+java.lang.NoClassDefFoundError: org/junit/Assert
+	at Task.SimplyTaskListTest.testSetTaskName(SimplyTaskListTest.java:186)
+
+Task.SimplyTaskListTest.testSize()  Time elapsed: 0 sec  <<< FAILURE!
+java.lang.NoClassDefFoundError: org/junit/Assert
+	at Task.SimplyTaskListTest.testSize(SimplyTaskListTest.java:193)
+
+Task.SimplyTaskListTest.testGetTaskIndex()  Time elapsed: 0 sec  <<< FAILURE!
+java.lang.NoClassDefFoundError: org/junit/Assert
+	at Task.SimplyTaskListTest.testGetTaskIndex(SimplyTaskListTest.java:77)
+
+Task.SimplyTaskListTest.testGetListName()  Time elapsed: 0 sec  <<< FAILURE!
+java.lang.NoClassDefFoundError: org/junit/Assert
+	at Task.SimplyTaskListTest.testGetListName(SimplyTaskListTest.java:133)
+
+Task.SimplyTaskListTest.testGetTaskName()  Time elapsed: 0 sec  <<< FAILURE!
+java.lang.NoClassDefFoundError: org/junit/Assert
+	at Task.SimplyTaskListTest.testGetTaskName(SimplyTaskListTest.java:169)
+
+Task.SimplyTaskListTest.testGetCategory()  Time elapsed: 0 sec  <<< FAILURE!
+java.lang.NoClassDefFoundError: org/junit/Assert
+	at Task.SimplyTaskListTest.testGetCategory(SimplyTaskListTest.java:109)
+
+Task.SimplyTaskListTest.testGetPriority()  Time elapsed: 0 sec  <<< FAILURE!
+java.lang.NoClassDefFoundError: org/junit/Assert
+	at Task.SimplyTaskListTest.testGetPriority(SimplyTaskListTest.java:139)
+
+Task.SimplyTaskListTest.testFinishTask()  Time elapsed: 0 sec  <<< FAILURE!
+java.lang.NoClassDefFoundError: org/junit/Assert
+	at Task.SimplyTaskListTest.testFinishTask(SimplyTaskListTest.java:85)
+
+Task.SimplyTaskListTest.testAddTask()  Time elapsed: 0 sec  <<< FAILURE!
+java.lang.NoClassDefFoundError: org/junit/Assert
+	at Task.SimplyTaskListTest.testAddTask(SimplyTaskListTest.java:31)
+
+Task.SimplyTaskListTest.testGetFirstIndexOFCategory()  Time elapsed: 0 sec  <<< FAILURE!
+java.lang.NoClassDefFoundError: org/junit/Assert
+	at Task.SimplyTaskListTest.testGetFirstIndexOFCategory(SimplyTaskListTest.java:101)
+
+Task.SimplyTaskListTest.testGetTaskComment()  Time elapsed: 0 sec  <<< FAILURE!
+java.lang.NoClassDefFoundError: org/junit/Assert
+	at Task.SimplyTaskListTest.testGetTaskComment(SimplyTaskListTest.java:21)
+
+Task.SimplyTaskListTest.testGetIsFinished()  Time elapsed: 0.009 sec  <<< FAILURE!
+java.lang.NoClassDefFoundError: org/junit/Assert
+	at Task.SimplyTaskListTest.testGetIsFinished(SimplyTaskListTest.java:119)
+
+Task.SimplyTaskListTest.testGetTaskCategory()  Time elapsed: 0.006 sec  <<< FAILURE!
+java.lang.NoClassDefFoundError: org/junit/Assert
+	at Task.SimplyTaskListTest.testGetTaskCategory(SimplyTaskListTest.java:159)
+
+Task.SimplyTaskListTest.testGetLastPriorityInCategory()  Time elapsed: 0.001 sec  <<< FAILURE!
+java.lang.NoClassDefFoundError: org/junit/Assert
+	at Task.SimplyTaskListTest.testGetLastPriorityInCategory(SimplyTaskListTest.java:125)
+
+Task.SimplyTaskListTest.testGetPriorityCategories()  Time elapsed: 0.001 sec  <<< FAILURE!
+java.lang.NoClassDefFoundError: org/junit/Assert
+	at Task.SimplyTaskListTest.testGetPriorityCategories(SimplyTaskListTest.java:152)
+
+Task.SimplyTaskListTest.testGetLastIndexOfCategory()  Time elapsed: 0.001 sec  <<< FAILURE!
+java.lang.NoClassDefFoundError: org/junit/Assert
+	at Task.SimplyTaskListTest.testGetLastIndexOfCategory(SimplyTaskListTest.java:93)
+

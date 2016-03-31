@@ -4,7 +4,7 @@
         <PriorCat>A</PriorCat>
         <Priority>1</Priority>
         <TaskName>JUnit</TaskName>
-        <TaskComment>unit teszt az XML-hez</TaskComment>
+        <TaskComment>unit teszt az XML-hez xxx</TaskComment>
         <TaskIsFinished>false</TaskIsFinished>
     </Task>
     <Task>

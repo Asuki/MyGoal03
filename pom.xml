@@ -7,6 +7,18 @@
   <description>This project made for writingdaily tasks.</description>
  <build>
     <plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-jar-plugin</artifactId>
+				<version>2.6</version>
+				<configuration>
+					<archive>
+						<manifest>
+							<mainClass>MyGoal03.GWin</mainClass>
+						</manifest>
+					</archive>
+				</configuration>
+			</plugin>
     	<plugin>
 	      <groupId>org.apache.maven.plugins</groupId>
 	      <artifactId>maven-enforcer-plugin</artifactId>
@@ -48,14 +60,14 @@
             </dependencies>
             <executions>
                <execution>
-                   <phase>package</phase>
+                   <phase>MyGoal</phase>
                    <goals><goal>proguard</goal></goals>
                </execution>
             </executions>
             <configuration>
                 <proguardVersion>4.10</proguardVersion>
                 <options>
-                    <option>-keep public class MyGoal.GWin{public static void main(java.lang.String[]);}</option>
+                    <option>-keep public class MyGoal.GWin03{public static void main(java.lang.String[]);}</option>
                 </options>
                 <libs>
                     <lib>${java.home}/lib/rt.jar</lib>
@@ -78,10 +90,24 @@
         <artifactId>maven-jxr-plugin</artifactId>
         <version>2.5</version>
       </plugin>
-      <plugin>
+       <plugin>
         <groupId>org.codehaus.mojo</groupId>
         <artifactId>cobertura-maven-plugin</artifactId>
         <version>2.7</version>
+        <configuration>
+          <instrumentation>
+            <excludes>
+              <exclude>comsrc/test/java/SimplyTaskListTest.java</exclude>
+            </excludes>
+          </instrumentation>
+        </configuration>
+        <executions>
+          <execution>
+            <goals>
+              <goal>clean</goal>
+            </goals>
+          </execution>
+        </executions>
       </plugin>
       <plugin>
 		<groupId>org.apache.maven.plugins</groupId>
