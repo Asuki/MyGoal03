@@ -181,13 +181,6 @@ public class SimplyTaskListTest {
 	}
 	
 	@Test
-	public void testSetTaskName() throws Exception {
-		SimplyTaskList taskList = createSomeTask();
-		assertTrue(taskList.setTaskName("taskA2", "newTaskName"));
-		assertEquals(taskList.getTaskName(2), "newTaskName");
-	}
-	
-	@Test
 	public void testSize() throws Exception {
 		SimplyTaskList taskList = createSomeTask();
 		assertEquals(taskList.size(), 7);

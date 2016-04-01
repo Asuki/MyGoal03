@@ -148,6 +148,7 @@ import org.w3c.dom.NodeList;
  * </pre>
  * 
  * @author Asuki
+ * @version 0.3
  *
  */
 public class SimplyTaskList {
@@ -198,12 +199,15 @@ public class SimplyTaskList {
 		finishedTasks = new LinkedList<SimplyTask>();
 		priorCat = new LinkedList<String>();
 		priority = new LinkedList<Integer>();
+		
+		//Adding category elements.
 		priorityCategories = new LinkedList<String>();
 		priorityCategories.add("A");
 		priorityCategories.add("B");
 		priorityCategories.add("C");
 		priorityCategories.add("D");
 		categoryInfo = "A - Mindenképp fontos, elvégzendő feladat rövid időn belül | B - Olyan feladat ami hosszabb távú | C - Nem fontos feladat | D - Delegálandó feladat: Amit más is el tud végezni, azt delegálni kell";
+		
 		isUsedCat = new LinkedList<Integer>();
 		for (int i = 0; i < priorityCategories.size(); i++) {
 			isUsedCat.add(0);
@@ -247,6 +251,19 @@ public class SimplyTaskList {
 	/**
 	 * Adds the index of the task in the active task list.
 	 * 
+	 * Usage example:
+	 * <pre>
+	 * 
+	 * SimplyTaskList getInfo = new SimplyTaskList("getTask");
+	 *	for (int i = 0; i &lt; 6; i++) {
+	 *		getInfo.addTask("A", i + 1, "taskName" + i, "");
+	 *	}
+	 *	System.out.println(getInfo.getTaskIndex("taskName2"));
+	 * 
+	 * </pre>
+	 * Output: 
+	 * 2
+	 * 
 	 * @param taskName The name what's index we search for.
 	 * @return the index of the task if it is in the active task list and -1 otherwise.
 	 */
@@ -283,6 +300,21 @@ public class SimplyTaskList {
 	
 	/**
 	 * Gives the last priority value of the given priority category.
+	 * 
+	 * Usage example:
+	 * <pre>
+	 * 
+	 * SimplyTaskList getInfo = new SimplyTaskList("getTask");
+	 *	for (int i = 0; i &lt; 6; i++) {
+	 *		getInfo.addTask("A", i + 1, "taskName" + i, "");
+	 *	}
+	 *	System.out.println(getInfo.getLastIndexOfCategory("A"));
+	 *	System.out.println(getInfo.getLastIndexOfCategory("B"));
+	 * 
+	 * </pre>
+	 * Outputs: 
+	 * 5
+	 * -1
 	 * 
 	 * @param priorCat The priority category what we want to find the last priority.
 	 * @return The last element of the priority category.
@@ -330,6 +362,28 @@ public class SimplyTaskList {
 	/**
 	 * It gives the names of the finished tasks.
 	 * 
+	 * Usage example:
+	 * <pre>
+	 * 
+	 * SimplyTaskList getInfo = new SimplyTaskList("getTask");
+	 *	for (int i = 0; i &lt; 6; i++) {
+	 *		getInfo.addTask("A", i + 1, "taskName" + i, "");
+	 *	}
+	 *	
+	 *	getInfo.FinishTask(2);
+	 *	getInfo.FinishTask(4);
+	 *	getInfo.FinishTask(0);
+	 *	
+	 *	for (String tasks : getInfo.getFinishedTaskNames()) {
+	 *		System.out.println(tasks);
+	 *	}
+	 * 
+	 * </pre>
+	 * Outputs: 
+	 * taskName2
+	 * taskName5
+	 * taskName0
+	 * 
 	 * @return the name of the tasks
 	 */
 	public LinkedList<String> getFinishedTaskNames(){
@@ -344,30 +398,11 @@ public class SimplyTaskList {
 		logger.exiting("SimplyTaskList", "getFinishedTaskNames", loggerString);
 		return result;
 	}
-	 
-	 /**
-	  * Renames the task if there is no other task with the new name
-	  * 
-	 * @param oldName The task name what we want to change.
-	 * @param newName The name what we want to use in the future.
-	 * @return True if the name change was successful and false if it is failed.
-	 */
-	public boolean setTaskName (String oldName, String newName){
-		logger.entering("SimlyTaskList", "setTaskName", new Object [] {oldName, newName});
-		 int taskIndex;
-		 if ((taskIndex = getTaskIndex(oldName)) != -1 && getTaskIndex(newName) == -1){
-			 tasks.get(taskIndex).setTaskName(newName);
-			 logger.info("Task name modified from " + oldName + "to " + newName);
-			 logger.exiting("SimplyTaskList", "setTaskName", true);
-			 return true;
-		 }
-		 logger.info("Task name was not modified because the task name is already exists");
-		 logger.exiting("SimplyTaskList", "setTaskName", false);
-		 return false;
-	 }
 	
 	/**
 	 * Ads a new task into the list. The method orders by categories and priorities.
+	 * 
+	 * <p>You can read examples here: {@link Task.SimplyTaskList}
 	 * 
 	 * @param pcat The priority category of the task.
 	 * @param prior The priority of the task.
@@ -384,7 +419,7 @@ public class SimplyTaskList {
 			if (tasks.size() > 0){
 				//If the category of the new task is exists
 				if (isUsedCategory(pcat)){
-					logger.info("Adding a task with am existing prority");
+					logger.info("Adding a task with an existing prority");
 					//Sets the previous category's last priority index
 					Integer indexTmp = getPrevCatIndex(pcat);
 					indexTmp = indexTmp < 0 ? 0 : indexTmp;
@@ -448,10 +483,27 @@ public class SimplyTaskList {
 	/**
 	 * Gives the index of the previous category from the priorityCategories list.
 	 * 
+	 * Usage example:
+	 * <pre> 
+	 * 
+	 * SimplyTaskList getInfo = new SimplyTaskList("getTask");
+	 *	for (int i = 0; i &lt; 6; i++) {
+	 *		getInfo.addTask("A", i + 1, "taskName" + i, "");
+	 *	}
+	 *	System.out.print(getInfo.getPrevCatIndex("A"));
+	 *	getInfo.addTask("C", 1, "C task", "comment");
+	 *	System.out.print(getInfo.getPrevCatIndex("C"));
+	 * 
+	 * </pre>
+	 * 
+	 * Output:
+	 * -1
+	 * 2
+	 * 
 	 * @param cat The category what's ancestor we search.
 	 * @return The index of the previous category and -1 otherwise.
 	 */
-	private Integer getPrevCatIndex(String cat){
+	public Integer getPrevCatIndex(String cat){
 		logger.entering("SimplyTaskList", "getPrevCatIndex", new Object[] {cat});
 		Integer catIndex = priorityCategories.indexOf(cat);
 		Integer result = -1;
@@ -466,18 +518,22 @@ public class SimplyTaskList {
 	/**
 	 * Gives the index of the next category used from the possible category list.
 	 * 
-	 * The catIndex stores the index of the given category.
-	 * {@code 
-	 * int catIndex = priorityCategories.indexOf(cat);
-	 * }
+	 * Usage example:
+	 * <pre> 
 	 * 
-	 * Looping through the possible categories and find the lowest possible next index.
-	 * {@code 
-	 * for (int i = isUsedCat.size() - 1; i >= 0 && catIndex != i; i++) {
-	 *		if (isUsedCat.get(i) != 0 && i > catIndex)
-	 *			result = i;
+	 * SimplyTaskList getInfo = new SimplyTaskList("getTask");
+	 *	for (int i = 0; i &lt; 6; i++) {
+	 *		getInfo.addTask("A", i + 1, "taskName" + i, "");
 	 *	}
-	 * }
+	 *	System.out.print(getInfo.getNextCatIndex("A"));
+	 *	getInfo.addTask("C", 1, "C task", "comment");
+	 *	System.out.print(getInfo.getNextCatIndex("A"));
+	 * 
+	 * </pre>
+	 * 
+	 * Output:
+	 * -1
+	 * 2
 	 * 
 	 * @param cat The category what's next we search.
 	 * @return The index of the next category and -1 otherwise.
@@ -485,8 +541,9 @@ public class SimplyTaskList {
 	public int getNextCatIndex(String cat){
 		logger.entering("SimplyTaskList", "getNextCatIndex", new Object[] {cat});
 		int catIndex = priorityCategories.indexOf(cat);
-		int result = isUsedCat.size() - 1;
-		for (int i = isUsedCat.size() - 1; i >= 0 && catIndex != i; i++) {
+		int result = -1;
+		int max = isUsedCat.size() - 1;
+		for (int i = max; i >= 0 && catIndex != i; i--) {
 			if (isUsedCat.get(i) != 0 && i > catIndex)
 				result = i;
 		}
@@ -502,15 +559,6 @@ public class SimplyTaskList {
 	 */
 	private boolean isUsedCategory(String cat){
 		return isUsedCat.get(priorityCategories.indexOf(cat)) != 0;
-	}
-	
-	/**
-	 * Sets a category to used.
-	 * 
-	 * @param cat The category what we want to set as used.
-	 */
-	private void setCatToUsed(String cat){
-		isUsedCat.set(priorityCategories.indexOf(cat), 1);
 	}
 	
 	/**
@@ -671,6 +719,8 @@ public class SimplyTaskList {
 
 	/**
 	 * Modify a task with the given information.
+	 * 
+	 * <p>You can read examples here: {@link Task.SimplyTaskList}
 	 * 
 	 * @param taskIndex The index of the task what we want to modify.
 	 * @param pcat The new priority category.
