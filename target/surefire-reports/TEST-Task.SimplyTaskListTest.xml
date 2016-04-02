@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="17" failures="17" name="Task.SimplyTaskListTest" time="0.067" errors="0" skipped="0">
+<testsuite tests="16" failures="16" name="task.SimplyTaskListTest" time="5.92" errors="0" skipped="0">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk1.8.0_73\jre\bin"/>
@@ -44,7 +44,7 @@
     <property name="java.vm.specification.version" value="1.8"/>
     <property name="sun.arch.data.model" value="64"/>
     <property name="java.home" value="C:\Program Files\Java\jdk1.8.0_73\jre"/>
-    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher package"/>
+    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher test"/>
     <property name="java.specification.vendor" value="Oracle Corporation"/>
     <property name="user.language" value="hu"/>
     <property name="awt.toolkit" value="sun.awt.windows.WToolkit"/>
@@ -63,9 +63,9 @@
     <property name="sun.desktop" value="windows"/>
     <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
-  <testcase classname="Task.SimplyTaskListTest" name="Task.SimplyTaskListTest.testSetListName" time="0.049">
+  <testcase classname="task.SimplyTaskListTest" name="task.SimplyTaskListTest.testGetIsFinished" time="0.771">
     <failure message="org/junit/Assert" type="java.lang.NoClassDefFoundError">java.lang.NoClassDefFoundError: org/junit/Assert
-	at Task.SimplyTaskListTest.testSetListName(SimplyTaskListTest.java:180)
+	at task.SimplyTaskListTest.testGetIsFinished(SimplyTaskListTest.java:117)
 Caused by: java.lang.ClassNotFoundException: org.junit.Assert
 	at java.net.URLClassLoader.findClass(URLClassLoader.java:381)
 	at java.lang.ClassLoader.loadClass(ClassLoader.java:424)
@@ -73,85 +73,1336 @@ Caused by: java.lang.ClassNotFoundException: org.junit.Assert
 	at java.lang.ClassLoader.loadClass(ClassLoader.java:357)
 	... 19 more
 </failure>
+    <system-err>ápr. 01, 2016 11:35:01 DU task.SimplyTaskList getTaskIndex
+INFO: Task index did not find.
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList addTask
+INFO: Task name does not exists. Adding starts
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList addTask
+INFO: Adding the first element
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList getTaskIndex
+INFO: Task index did not find.
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList addTask
+INFO: Task name does not exists. Adding starts
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList addTask
+INFO: Adding a task with an existing prority
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList getLastIndexOfCategory
+INFO: The first index was found
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList getLastIndexOfCategory
+INFO: The category does not exist
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList getTaskIndex
+INFO: Task index did not find.
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList addTask
+INFO: Task name does not exists. Adding starts
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList addTask
+INFO: Adding a task with an existing prority
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList getLastIndexOfCategory
+INFO: The first index was found
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList getLastIndexOfCategory
+INFO: The first index was found
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList getLastIndexOfCategory
+INFO: The category does not exist
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList getTaskIndex
+INFO: Task index did not find.
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList addTask
+INFO: Task name does not exists. Adding starts
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList addTask
+INFO: Adding a task with an existing prority
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList getLastIndexOfCategory
+INFO: The first index was found
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList getLastIndexOfCategory
+INFO: The first index was found
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList getLastIndexOfCategory
+INFO: The first index was found
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList getLastIndexOfCategory
+INFO: The category does not exist
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList getTaskIndex
+INFO: Task index did not find.
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList addTask
+INFO: Task name does not exists. Adding starts
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList addTask
+INFO: Adding a task with new prority
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList getLastIndexOfCategory
+INFO: The first index was found
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList getLastIndexOfCategory
+INFO: The first index was found
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList getLastIndexOfCategory
+INFO: The first index was found
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList getLastIndexOfCategory
+INFO: The first index was found
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList getLastIndexOfCategory
+INFO: The category does not exist
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList getTaskIndex
+INFO: Task index did not find.
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList addTask
+INFO: Task name does not exists. Adding starts
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList addTask
+INFO: Adding a task with an existing prority
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList getLastIndexOfCategory
+INFO: The first index was found
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList getLastIndexOfCategory
+INFO: The first index was found
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList getLastIndexOfCategory
+INFO: The first index was found
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList getLastIndexOfCategory
+INFO: The first index was found
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList getLastIndexOfCategory
+INFO: The category does not exist
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList getTaskIndex
+INFO: Task index did not find.
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList addTask
+INFO: Task name does not exists. Adding starts
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList addTask
+INFO: Adding a task with new prority
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList getLastIndexOfCategory
+INFO: The first index was found
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList getLastIndexOfCategory
+INFO: The first index was found
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList getLastIndexOfCategory
+INFO: The category does not exist
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList reorderTasksAfterRemove
+INFO: Priorities was added successful
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList finishTask
+INFO: Task with then taskIndex: 3 was succesful.
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList isFinished
+INFO: The task is finished: taskA3
+</system-err>
   </testcase>
-  <testcase classname="Task.SimplyTaskListTest" name="Task.SimplyTaskListTest.testSetTaskName" time="0">
+  <testcase classname="task.SimplyTaskListTest" name="task.SimplyTaskListTest.testGetTaskComment" time="0.028">
     <failure message="org/junit/Assert" type="java.lang.NoClassDefFoundError">java.lang.NoClassDefFoundError: org/junit/Assert
-	at Task.SimplyTaskListTest.testSetTaskName(SimplyTaskListTest.java:186)
+	at task.SimplyTaskListTest.testGetTaskComment(SimplyTaskListTest.java:21)
 </failure>
+    <system-err>ápr. 01, 2016 11:35:02 DU task.SimplyTaskList getTaskIndex
+INFO: Task index did not find.
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList addTask
+INFO: Task name does not exists. Adding starts
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList addTask
+INFO: Adding the first element
+</system-err>
   </testcase>
-  <testcase classname="Task.SimplyTaskListTest" name="Task.SimplyTaskListTest.testSize" time="0">
+  <testcase classname="task.SimplyTaskListTest" name="task.SimplyTaskListTest.testGetLastPriorityInCategory" time="0.816">
     <failure message="org/junit/Assert" type="java.lang.NoClassDefFoundError">java.lang.NoClassDefFoundError: org/junit/Assert
-	at Task.SimplyTaskListTest.testSize(SimplyTaskListTest.java:193)
+	at task.SimplyTaskListTest.testGetLastPriorityInCategory(SimplyTaskListTest.java:123)
 </failure>
+    <system-err>ápr. 01, 2016 11:35:02 DU task.SimplyTaskList getTaskIndex
+INFO: Task index did not find.
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList addTask
+INFO: Task name does not exists. Adding starts
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList addTask
+INFO: Adding the first element
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList getTaskIndex
+INFO: Task index did not find.
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList addTask
+INFO: Task name does not exists. Adding starts
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList addTask
+INFO: Adding a task with an existing prority
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList getLastIndexOfCategory
+INFO: The first index was found
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList getLastIndexOfCategory
+INFO: The category does not exist
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList getTaskIndex
+INFO: Task index did not find.
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList addTask
+INFO: Task name does not exists. Adding starts
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList addTask
+INFO: Adding a task with an existing prority
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList getLastIndexOfCategory
+INFO: The first index was found
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList getLastIndexOfCategory
+INFO: The first index was found
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList getLastIndexOfCategory
+INFO: The category does not exist
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList getTaskIndex
+INFO: Task index did not find.
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList addTask
+INFO: Task name does not exists. Adding starts
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList addTask
+INFO: Adding a task with an existing prority
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList getLastIndexOfCategory
+INFO: The first index was found
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList getLastIndexOfCategory
+INFO: The first index was found
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList getLastIndexOfCategory
+INFO: The first index was found
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList getLastIndexOfCategory
+INFO: The category does not exist
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList getTaskIndex
+INFO: Task index did not find.
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList addTask
+INFO: Task name does not exists. Adding starts
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList addTask
+INFO: Adding a task with new prority
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList getLastIndexOfCategory
+INFO: The first index was found
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList getLastIndexOfCategory
+INFO: The first index was found
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList getLastIndexOfCategory
+INFO: The first index was found
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList getLastIndexOfCategory
+INFO: The first index was found
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList getLastIndexOfCategory
+INFO: The category does not exist
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList getTaskIndex
+INFO: Task index did not find.
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList addTask
+INFO: Task name does not exists. Adding starts
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList addTask
+INFO: Adding a task with an existing prority
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList getLastIndexOfCategory
+INFO: The first index was found
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList getLastIndexOfCategory
+INFO: The first index was found
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList getLastIndexOfCategory
+INFO: The first index was found
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList getLastIndexOfCategory
+INFO: The first index was found
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList getLastIndexOfCategory
+INFO: The category does not exist
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList getTaskIndex
+INFO: Task index did not find.
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList addTask
+INFO: Task name does not exists. Adding starts
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList addTask
+INFO: Adding a task with new prority
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList getLastIndexOfCategory
+INFO: The first index was found
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList getLastIndexOfCategory
+INFO: The first index was found
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList getLastIndexOfCategory
+INFO: The category does not exist
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList getLastPriorityInCategory
+INFO: The category ([A, A, A, A, B, B, C]found: 4
+</system-err>
   </testcase>
-  <testcase classname="Task.SimplyTaskListTest" name="Task.SimplyTaskListTest.testGetTaskIndex" time="0">
+  <testcase classname="task.SimplyTaskListTest" name="task.SimplyTaskListTest.testGetLastIndexOfCategory" time="0.417">
     <failure message="org/junit/Assert" type="java.lang.NoClassDefFoundError">java.lang.NoClassDefFoundError: org/junit/Assert
-	at Task.SimplyTaskListTest.testGetTaskIndex(SimplyTaskListTest.java:77)
+	at task.SimplyTaskListTest.testGetLastIndexOfCategory(SimplyTaskListTest.java:91)
 </failure>
+    <system-err>ápr. 01, 2016 11:35:02 DU task.SimplyTaskList getTaskIndex
+INFO: Task index did not find.
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList addTask
+INFO: Task name does not exists. Adding starts
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList addTask
+INFO: Adding the first element
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList getTaskIndex
+INFO: Task index did not find.
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList addTask
+INFO: Task name does not exists. Adding starts
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList addTask
+INFO: Adding a task with an existing prority
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList getLastIndexOfCategory
+INFO: The first index was found
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList getLastIndexOfCategory
+INFO: The category does not exist
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList getTaskIndex
+INFO: Task index did not find.
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList addTask
+INFO: Task name does not exists. Adding starts
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList addTask
+INFO: Adding a task with an existing prority
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList getLastIndexOfCategory
+INFO: The first index was found
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList getLastIndexOfCategory
+INFO: The first index was found
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList getLastIndexOfCategory
+INFO: The category does not exist
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList getTaskIndex
+INFO: Task index did not find.
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList addTask
+INFO: Task name does not exists. Adding starts
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList addTask
+INFO: Adding a task with an existing prority
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList getLastIndexOfCategory
+INFO: The first index was found
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList getLastIndexOfCategory
+INFO: The first index was found
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList getLastIndexOfCategory
+INFO: The first index was found
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList getLastIndexOfCategory
+INFO: The category does not exist
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList getTaskIndex
+INFO: Task index did not find.
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList addTask
+INFO: Task name does not exists. Adding starts
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList addTask
+INFO: Adding a task with new prority
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList getLastIndexOfCategory
+INFO: The first index was found
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList getLastIndexOfCategory
+INFO: The first index was found
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList getLastIndexOfCategory
+INFO: The first index was found
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList getLastIndexOfCategory
+INFO: The first index was found
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList getLastIndexOfCategory
+INFO: The category does not exist
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList getTaskIndex
+INFO: Task index did not find.
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList addTask
+INFO: Task name does not exists. Adding starts
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList addTask
+INFO: Adding a task with an existing prority
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList getLastIndexOfCategory
+INFO: The first index was found
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList getLastIndexOfCategory
+INFO: The first index was found
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList getLastIndexOfCategory
+INFO: The first index was found
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList getLastIndexOfCategory
+INFO: The first index was found
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList getLastIndexOfCategory
+INFO: The category does not exist
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList getTaskIndex
+INFO: Task index did not find.
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList addTask
+INFO: Task name does not exists. Adding starts
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList addTask
+INFO: Adding a task with new prority
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList getLastIndexOfCategory
+INFO: The first index was found
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList getLastIndexOfCategory
+INFO: The first index was found
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList getLastIndexOfCategory
+INFO: The category does not exist
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList getLastIndexOfCategory
+INFO: The first index was found
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList getLastIndexOfCategory
+INFO: The first index was found
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList getLastIndexOfCategory
+INFO: The first index was found
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList getLastIndexOfCategory
+INFO: The first index was found
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList getLastIndexOfCategory
+INFO: The category does not exist
+</system-err>
   </testcase>
-  <testcase classname="Task.SimplyTaskListTest" name="Task.SimplyTaskListTest.testGetListName" time="0">
+  <testcase classname="task.SimplyTaskListTest" name="task.SimplyTaskListTest.testGetFirstIndexOFCategory" time="0.475">
     <failure message="org/junit/Assert" type="java.lang.NoClassDefFoundError">java.lang.NoClassDefFoundError: org/junit/Assert
-	at Task.SimplyTaskListTest.testGetListName(SimplyTaskListTest.java:133)
+	at task.SimplyTaskListTest.testGetFirstIndexOFCategory(SimplyTaskListTest.java:99)
 </failure>
+    <system-err>ápr. 01, 2016 11:35:02 DU task.SimplyTaskList getTaskIndex
+INFO: Task index did not find.
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList addTask
+INFO: Task name does not exists. Adding starts
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList addTask
+INFO: Adding the first element
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList getTaskIndex
+INFO: Task index did not find.
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList addTask
+INFO: Task name does not exists. Adding starts
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList addTask
+INFO: Adding a task with an existing prority
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList getLastIndexOfCategory
+INFO: The first index was found
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList getLastIndexOfCategory
+INFO: The category does not exist
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList getTaskIndex
+INFO: Task index did not find.
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList addTask
+INFO: Task name does not exists. Adding starts
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList addTask
+INFO: Adding a task with an existing prority
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList getLastIndexOfCategory
+INFO: The first index was found
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList getLastIndexOfCategory
+INFO: The first index was found
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList getLastIndexOfCategory
+INFO: The category does not exist
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList getTaskIndex
+INFO: Task index did not find.
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList addTask
+INFO: Task name does not exists. Adding starts
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList addTask
+INFO: Adding a task with an existing prority
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList getLastIndexOfCategory
+INFO: The first index was found
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList getLastIndexOfCategory
+INFO: The first index was found
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList getLastIndexOfCategory
+INFO: The first index was found
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList getLastIndexOfCategory
+INFO: The category does not exist
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList getTaskIndex
+INFO: Task index did not find.
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList addTask
+INFO: Task name does not exists. Adding starts
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList addTask
+INFO: Adding a task with new prority
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList getLastIndexOfCategory
+INFO: The first index was found
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList getLastIndexOfCategory
+INFO: The first index was found
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList getLastIndexOfCategory
+INFO: The first index was found
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList getLastIndexOfCategory
+INFO: The first index was found
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList getLastIndexOfCategory
+INFO: The category does not exist
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList getTaskIndex
+INFO: Task index did not find.
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList addTask
+INFO: Task name does not exists. Adding starts
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList addTask
+INFO: Adding a task with an existing prority
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList getLastIndexOfCategory
+INFO: The first index was found
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList getLastIndexOfCategory
+INFO: The first index was found
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList getLastIndexOfCategory
+INFO: The first index was found
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList getLastIndexOfCategory
+INFO: The first index was found
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList getLastIndexOfCategory
+INFO: The category does not exist
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList getTaskIndex
+INFO: Task index did not find.
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList addTask
+INFO: Task name does not exists. Adding starts
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList addTask
+INFO: Adding a task with new prority
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList getLastIndexOfCategory
+INFO: The first index was found
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList getLastIndexOfCategory
+INFO: The first index was found
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList getLastIndexOfCategory
+INFO: The category does not exist
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList getFirstIndexOfCategory
+INFO: The first index was found
+</system-err>
   </testcase>
-  <testcase classname="Task.SimplyTaskListTest" name="Task.SimplyTaskListTest.testGetTaskName" time="0">
+  <testcase classname="task.SimplyTaskListTest" name="task.SimplyTaskListTest.testGetPriorityCategories" time="0.34">
     <failure message="org/junit/Assert" type="java.lang.NoClassDefFoundError">java.lang.NoClassDefFoundError: org/junit/Assert
-	at Task.SimplyTaskListTest.testGetTaskName(SimplyTaskListTest.java:169)
+	at task.SimplyTaskListTest.testGetPriorityCategories(SimplyTaskListTest.java:150)
 </failure>
+    <system-err>ápr. 01, 2016 11:35:02 DU task.SimplyTaskList getTaskIndex
+INFO: Task index did not find.
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList addTask
+INFO: Task name does not exists. Adding starts
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList addTask
+INFO: Adding the first element
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList getTaskIndex
+INFO: Task index did not find.
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList addTask
+INFO: Task name does not exists. Adding starts
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList addTask
+INFO: Adding a task with an existing prority
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList getLastIndexOfCategory
+INFO: The first index was found
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList getLastIndexOfCategory
+INFO: The category does not exist
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList getTaskIndex
+INFO: Task index did not find.
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList addTask
+INFO: Task name does not exists. Adding starts
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList addTask
+INFO: Adding a task with an existing prority
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList getLastIndexOfCategory
+INFO: The first index was found
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList getLastIndexOfCategory
+INFO: The first index was found
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList getLastIndexOfCategory
+INFO: The category does not exist
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList getTaskIndex
+INFO: Task index did not find.
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList addTask
+INFO: Task name does not exists. Adding starts
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList addTask
+INFO: Adding a task with an existing prority
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList getLastIndexOfCategory
+INFO: The first index was found
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList getLastIndexOfCategory
+INFO: The first index was found
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList getLastIndexOfCategory
+INFO: The first index was found
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList getLastIndexOfCategory
+INFO: The category does not exist
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList getTaskIndex
+INFO: Task index did not find.
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList addTask
+INFO: Task name does not exists. Adding starts
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList addTask
+INFO: Adding a task with new prority
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList getLastIndexOfCategory
+INFO: The first index was found
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList getLastIndexOfCategory
+INFO: The first index was found
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList getLastIndexOfCategory
+INFO: The first index was found
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList getLastIndexOfCategory
+INFO: The first index was found
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList getLastIndexOfCategory
+INFO: The category does not exist
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList getTaskIndex
+INFO: Task index did not find.
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList addTask
+INFO: Task name does not exists. Adding starts
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList addTask
+INFO: Adding a task with an existing prority
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList getLastIndexOfCategory
+INFO: The first index was found
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList getLastIndexOfCategory
+INFO: The first index was found
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList getLastIndexOfCategory
+INFO: The first index was found
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList getLastIndexOfCategory
+INFO: The first index was found
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList getLastIndexOfCategory
+INFO: The category does not exist
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList getTaskIndex
+INFO: Task index did not find.
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList addTask
+INFO: Task name does not exists. Adding starts
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList addTask
+INFO: Adding a task with new prority
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList getLastIndexOfCategory
+INFO: The first index was found
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList getLastIndexOfCategory
+INFO: The first index was found
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList getLastIndexOfCategory
+INFO: The category does not exist
+</system-err>
   </testcase>
-  <testcase classname="Task.SimplyTaskListTest" name="Task.SimplyTaskListTest.testGetCategory" time="0">
+  <testcase classname="task.SimplyTaskListTest" name="task.SimplyTaskListTest.testGetTaskCategory" time="0.313">
     <failure message="org/junit/Assert" type="java.lang.NoClassDefFoundError">java.lang.NoClassDefFoundError: org/junit/Assert
-	at Task.SimplyTaskListTest.testGetCategory(SimplyTaskListTest.java:109)
+	at task.SimplyTaskListTest.testGetTaskCategory(SimplyTaskListTest.java:157)
 </failure>
+    <system-err>ápr. 01, 2016 11:35:02 DU task.SimplyTaskList getTaskIndex
+INFO: Task index did not find.
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList addTask
+INFO: Task name does not exists. Adding starts
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList addTask
+INFO: Adding the first element
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList getTaskIndex
+INFO: Task index did not find.
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList addTask
+INFO: Task name does not exists. Adding starts
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList addTask
+INFO: Adding a task with an existing prority
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList getLastIndexOfCategory
+INFO: The first index was found
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList getLastIndexOfCategory
+INFO: The category does not exist
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList getTaskIndex
+INFO: Task index did not find.
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList addTask
+INFO: Task name does not exists. Adding starts
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList addTask
+INFO: Adding a task with an existing prority
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList getLastIndexOfCategory
+INFO: The first index was found
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList getLastIndexOfCategory
+INFO: The first index was found
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList getLastIndexOfCategory
+INFO: The category does not exist
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList getTaskIndex
+INFO: Task index did not find.
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList addTask
+INFO: Task name does not exists. Adding starts
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList addTask
+INFO: Adding a task with an existing prority
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList getLastIndexOfCategory
+INFO: The first index was found
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList getLastIndexOfCategory
+INFO: The first index was found
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList getLastIndexOfCategory
+INFO: The first index was found
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList getLastIndexOfCategory
+INFO: The category does not exist
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList getTaskIndex
+INFO: Task index did not find.
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList addTask
+INFO: Task name does not exists. Adding starts
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList addTask
+INFO: Adding a task with new prority
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList getLastIndexOfCategory
+INFO: The first index was found
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList getLastIndexOfCategory
+INFO: The first index was found
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList getLastIndexOfCategory
+INFO: The first index was found
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList getLastIndexOfCategory
+INFO: The first index was found
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList getLastIndexOfCategory
+INFO: The category does not exist
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList getTaskIndex
+INFO: Task index did not find.
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList addTask
+INFO: Task name does not exists. Adding starts
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList addTask
+INFO: Adding a task with an existing prority
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList getLastIndexOfCategory
+INFO: The first index was found
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList getLastIndexOfCategory
+INFO: The first index was found
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList getLastIndexOfCategory
+INFO: The first index was found
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList getLastIndexOfCategory
+INFO: The first index was found
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList getLastIndexOfCategory
+INFO: The category does not exist
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList getTaskIndex
+INFO: Task index did not find.
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList addTask
+INFO: Task name does not exists. Adding starts
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList addTask
+INFO: Adding a task with new prority
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList getLastIndexOfCategory
+INFO: The first index was found
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList getLastIndexOfCategory
+INFO: The first index was found
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList getLastIndexOfCategory
+INFO: The category does not exist
+</system-err>
   </testcase>
-  <testcase classname="Task.SimplyTaskListTest" name="Task.SimplyTaskListTest.testGetPriority" time="0">
+  <testcase classname="task.SimplyTaskListTest" name="task.SimplyTaskListTest.testGetCategory" time="0.308">
     <failure message="org/junit/Assert" type="java.lang.NoClassDefFoundError">java.lang.NoClassDefFoundError: org/junit/Assert
-	at Task.SimplyTaskListTest.testGetPriority(SimplyTaskListTest.java:139)
+	at task.SimplyTaskListTest.testGetCategory(SimplyTaskListTest.java:107)
 </failure>
+    <system-err>ápr. 01, 2016 11:35:02 DU task.SimplyTaskList getTaskIndex
+INFO: Task index did not find.
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList addTask
+INFO: Task name does not exists. Adding starts
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList addTask
+INFO: Adding the first element
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList getTaskIndex
+INFO: Task index did not find.
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList addTask
+INFO: Task name does not exists. Adding starts
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList addTask
+INFO: Adding a task with an existing prority
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList getLastIndexOfCategory
+INFO: The first index was found
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList getLastIndexOfCategory
+INFO: The category does not exist
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList getTaskIndex
+INFO: Task index did not find.
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList addTask
+INFO: Task name does not exists. Adding starts
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList addTask
+INFO: Adding a task with an existing prority
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList getLastIndexOfCategory
+INFO: The first index was found
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList getLastIndexOfCategory
+INFO: The first index was found
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList getLastIndexOfCategory
+INFO: The category does not exist
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList getTaskIndex
+INFO: Task index did not find.
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList addTask
+INFO: Task name does not exists. Adding starts
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList addTask
+INFO: Adding a task with an existing prority
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList getLastIndexOfCategory
+INFO: The first index was found
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList getLastIndexOfCategory
+INFO: The first index was found
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList getLastIndexOfCategory
+INFO: The first index was found
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList getLastIndexOfCategory
+INFO: The category does not exist
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList getTaskIndex
+INFO: Task index did not find.
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList addTask
+INFO: Task name does not exists. Adding starts
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList addTask
+INFO: Adding a task with new prority
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList getLastIndexOfCategory
+INFO: The first index was found
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList getLastIndexOfCategory
+INFO: The first index was found
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList getLastIndexOfCategory
+INFO: The first index was found
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList getLastIndexOfCategory
+INFO: The first index was found
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList getLastIndexOfCategory
+INFO: The category does not exist
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList getTaskIndex
+INFO: Task index did not find.
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList addTask
+INFO: Task name does not exists. Adding starts
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList addTask
+INFO: Adding a task with an existing prority
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList getLastIndexOfCategory
+INFO: The first index was found
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList getLastIndexOfCategory
+INFO: The first index was found
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList getLastIndexOfCategory
+INFO: The first index was found
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList getLastIndexOfCategory
+INFO: The first index was found
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList getLastIndexOfCategory
+INFO: The category does not exist
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList getTaskIndex
+INFO: Task index did not find.
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList addTask
+INFO: Task name does not exists. Adding starts
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList addTask
+INFO: Adding a task with new prority
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList getLastIndexOfCategory
+INFO: The first index was found
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList getLastIndexOfCategory
+INFO: The first index was found
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList getLastIndexOfCategory
+INFO: The category does not exist
+</system-err>
   </testcase>
-  <testcase classname="Task.SimplyTaskListTest" name="Task.SimplyTaskListTest.testFinishTask" time="0">
+  <testcase classname="task.SimplyTaskListTest" name="task.SimplyTaskListTest.testGetTaskName" time="0.294">
     <failure message="org/junit/Assert" type="java.lang.NoClassDefFoundError">java.lang.NoClassDefFoundError: org/junit/Assert
-	at Task.SimplyTaskListTest.testFinishTask(SimplyTaskListTest.java:85)
+	at task.SimplyTaskListTest.testGetTaskName(SimplyTaskListTest.java:167)
 </failure>
+    <system-err>ápr. 01, 2016 11:35:02 DU task.SimplyTaskList getTaskIndex
+INFO: Task index did not find.
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList addTask
+INFO: Task name does not exists. Adding starts
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList addTask
+INFO: Adding the first element
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList getTaskIndex
+INFO: Task index did not find.
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList addTask
+INFO: Task name does not exists. Adding starts
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList addTask
+INFO: Adding a task with an existing prority
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList getLastIndexOfCategory
+INFO: The first index was found
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList getLastIndexOfCategory
+INFO: The category does not exist
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList getTaskIndex
+INFO: Task index did not find.
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList addTask
+INFO: Task name does not exists. Adding starts
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList addTask
+INFO: Adding a task with an existing prority
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList getLastIndexOfCategory
+INFO: The first index was found
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList getLastIndexOfCategory
+INFO: The first index was found
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList getLastIndexOfCategory
+INFO: The category does not exist
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList getTaskIndex
+INFO: Task index did not find.
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList addTask
+INFO: Task name does not exists. Adding starts
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList addTask
+INFO: Adding a task with an existing prority
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList getLastIndexOfCategory
+INFO: The first index was found
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList getLastIndexOfCategory
+INFO: The first index was found
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList getLastIndexOfCategory
+INFO: The first index was found
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList getLastIndexOfCategory
+INFO: The category does not exist
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList getTaskIndex
+INFO: Task index did not find.
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList addTask
+INFO: Task name does not exists. Adding starts
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList addTask
+INFO: Adding a task with new prority
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList getLastIndexOfCategory
+INFO: The first index was found
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList getLastIndexOfCategory
+INFO: The first index was found
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList getLastIndexOfCategory
+INFO: The first index was found
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList getLastIndexOfCategory
+INFO: The first index was found
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList getLastIndexOfCategory
+INFO: The category does not exist
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList getTaskIndex
+INFO: Task index did not find.
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList addTask
+INFO: Task name does not exists. Adding starts
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList addTask
+INFO: Adding a task with an existing prority
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList getLastIndexOfCategory
+INFO: The first index was found
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList getLastIndexOfCategory
+INFO: The first index was found
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList getLastIndexOfCategory
+INFO: The first index was found
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList getLastIndexOfCategory
+INFO: The first index was found
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList getLastIndexOfCategory
+INFO: The category does not exist
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList getTaskIndex
+INFO: Task index did not find.
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList addTask
+INFO: Task name does not exists. Adding starts
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList addTask
+INFO: Adding a task with new prority
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList getLastIndexOfCategory
+INFO: The first index was found
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList getLastIndexOfCategory
+INFO: The first index was found
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList getLastIndexOfCategory
+INFO: The category does not exist
+</system-err>
   </testcase>
-  <testcase classname="Task.SimplyTaskListTest" name="Task.SimplyTaskListTest.testAddTask" time="0">
+  <testcase classname="task.SimplyTaskListTest" name="task.SimplyTaskListTest.testAddTask" time="0.019">
     <failure message="org/junit/Assert" type="java.lang.NoClassDefFoundError">java.lang.NoClassDefFoundError: org/junit/Assert
-	at Task.SimplyTaskListTest.testAddTask(SimplyTaskListTest.java:31)
+	at task.SimplyTaskListTest.testAddTask(SimplyTaskListTest.java:29)
 </failure>
+    <system-err>ápr. 01, 2016 11:35:02 DU task.SimplyTaskList getTaskIndex
+INFO: Task index did not find.
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList addTask
+INFO: Task name does not exists. Adding starts
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList addTask
+INFO: Adding the first element
+</system-err>
   </testcase>
-  <testcase classname="Task.SimplyTaskListTest" name="Task.SimplyTaskListTest.testGetFirstIndexOFCategory" time="0">
+  <testcase classname="task.SimplyTaskListTest" name="task.SimplyTaskListTest.testGetTaskIndex" time="0.366">
     <failure message="org/junit/Assert" type="java.lang.NoClassDefFoundError">java.lang.NoClassDefFoundError: org/junit/Assert
-	at Task.SimplyTaskListTest.testGetFirstIndexOFCategory(SimplyTaskListTest.java:101)
+	at task.SimplyTaskListTest.testGetTaskIndex(SimplyTaskListTest.java:75)
 </failure>
+    <system-err>ápr. 01, 2016 11:35:02 DU task.SimplyTaskList getTaskIndex
+INFO: Task index did not find.
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList addTask
+INFO: Task name does not exists. Adding starts
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList addTask
+INFO: Adding the first element
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList getTaskIndex
+INFO: Task index did not find.
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList addTask
+INFO: Task name does not exists. Adding starts
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList addTask
+INFO: Adding a task with an existing prority
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList getLastIndexOfCategory
+INFO: The first index was found
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList getLastIndexOfCategory
+INFO: The category does not exist
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList getTaskIndex
+INFO: Task index did not find.
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList addTask
+INFO: Task name does not exists. Adding starts
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList addTask
+INFO: Adding a task with an existing prority
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList getLastIndexOfCategory
+INFO: The first index was found
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList getLastIndexOfCategory
+INFO: The first index was found
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList getLastIndexOfCategory
+INFO: The category does not exist
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList getTaskIndex
+INFO: Task index did not find.
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList addTask
+INFO: Task name does not exists. Adding starts
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList addTask
+INFO: Adding a task with an existing prority
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList getLastIndexOfCategory
+INFO: The first index was found
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList getLastIndexOfCategory
+INFO: The first index was found
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList getLastIndexOfCategory
+INFO: The first index was found
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList getLastIndexOfCategory
+INFO: The category does not exist
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList getTaskIndex
+INFO: Task index did not find.
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList addTask
+INFO: Task name does not exists. Adding starts
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList addTask
+INFO: Adding a task with new prority
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList getLastIndexOfCategory
+INFO: The first index was found
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList getLastIndexOfCategory
+INFO: The first index was found
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList getLastIndexOfCategory
+INFO: The first index was found
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList getLastIndexOfCategory
+INFO: The first index was found
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList getLastIndexOfCategory
+INFO: The category does not exist
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList getTaskIndex
+INFO: Task index did not find.
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList addTask
+INFO: Task name does not exists. Adding starts
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList addTask
+INFO: Adding a task with an existing prority
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList getLastIndexOfCategory
+INFO: The first index was found
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList getLastIndexOfCategory
+INFO: The first index was found
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList getLastIndexOfCategory
+INFO: The first index was found
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList getLastIndexOfCategory
+INFO: The first index was found
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList getLastIndexOfCategory
+INFO: The category does not exist
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList getTaskIndex
+INFO: Task index did not find.
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList addTask
+INFO: Task name does not exists. Adding starts
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList addTask
+INFO: Adding a task with new prority
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList getLastIndexOfCategory
+INFO: The first index was found
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList getLastIndexOfCategory
+INFO: The first index was found
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList getLastIndexOfCategory
+INFO: The category does not exist
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList getTaskIndex
+INFO: Task index found: 1
+</system-err>
   </testcase>
-  <testcase classname="Task.SimplyTaskListTest" name="Task.SimplyTaskListTest.testGetTaskComment" time="0">
+  <testcase classname="task.SimplyTaskListTest" name="task.SimplyTaskListTest.testFinishTask" time="0.319">
     <failure message="org/junit/Assert" type="java.lang.NoClassDefFoundError">java.lang.NoClassDefFoundError: org/junit/Assert
-	at Task.SimplyTaskListTest.testGetTaskComment(SimplyTaskListTest.java:21)
+	at task.SimplyTaskListTest.testFinishTask(SimplyTaskListTest.java:83)
 </failure>
+    <system-err>ápr. 01, 2016 11:35:02 DU task.SimplyTaskList getTaskIndex
+INFO: Task index did not find.
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList addTask
+INFO: Task name does not exists. Adding starts
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList addTask
+INFO: Adding the first element
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList getTaskIndex
+INFO: Task index did not find.
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList addTask
+INFO: Task name does not exists. Adding starts
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList addTask
+INFO: Adding a task with an existing prority
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList getLastIndexOfCategory
+INFO: The first index was found
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList getLastIndexOfCategory
+INFO: The category does not exist
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList getTaskIndex
+INFO: Task index did not find.
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList addTask
+INFO: Task name does not exists. Adding starts
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList addTask
+INFO: Adding a task with an existing prority
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList getLastIndexOfCategory
+INFO: The first index was found
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList getLastIndexOfCategory
+INFO: The first index was found
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList getLastIndexOfCategory
+INFO: The category does not exist
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList getTaskIndex
+INFO: Task index did not find.
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList addTask
+INFO: Task name does not exists. Adding starts
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList addTask
+INFO: Adding a task with an existing prority
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList getLastIndexOfCategory
+INFO: The first index was found
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList getLastIndexOfCategory
+INFO: The first index was found
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList getLastIndexOfCategory
+INFO: The first index was found
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList getLastIndexOfCategory
+INFO: The category does not exist
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList getTaskIndex
+INFO: Task index did not find.
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList addTask
+INFO: Task name does not exists. Adding starts
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList addTask
+INFO: Adding a task with new prority
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList getLastIndexOfCategory
+INFO: The first index was found
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList getLastIndexOfCategory
+INFO: The first index was found
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList getLastIndexOfCategory
+INFO: The first index was found
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList getLastIndexOfCategory
+INFO: The first index was found
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList getLastIndexOfCategory
+INFO: The category does not exist
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList getTaskIndex
+INFO: Task index did not find.
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList addTask
+INFO: Task name does not exists. Adding starts
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList addTask
+INFO: Adding a task with an existing prority
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList getLastIndexOfCategory
+INFO: The first index was found
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList getLastIndexOfCategory
+INFO: The first index was found
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList getLastIndexOfCategory
+INFO: The first index was found
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList getLastIndexOfCategory
+INFO: The first index was found
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList getLastIndexOfCategory
+INFO: The category does not exist
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList getTaskIndex
+INFO: Task index did not find.
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList addTask
+INFO: Task name does not exists. Adding starts
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList addTask
+INFO: Adding a task with new prority
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList getLastIndexOfCategory
+INFO: The first index was found
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList getLastIndexOfCategory
+INFO: The first index was found
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList getLastIndexOfCategory
+INFO: The category does not exist
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList getTaskIndex
+INFO: Task index found: 1
+</system-err>
   </testcase>
-  <testcase classname="Task.SimplyTaskListTest" name="Task.SimplyTaskListTest.testGetIsFinished" time="0.009">
+  <testcase classname="task.SimplyTaskListTest" name="task.SimplyTaskListTest.testGetListName" time="0.32">
     <failure message="org/junit/Assert" type="java.lang.NoClassDefFoundError">java.lang.NoClassDefFoundError: org/junit/Assert
-	at Task.SimplyTaskListTest.testGetIsFinished(SimplyTaskListTest.java:119)
+	at task.SimplyTaskListTest.testGetListName(SimplyTaskListTest.java:131)
 </failure>
+    <system-err>ápr. 01, 2016 11:35:02 DU task.SimplyTaskList getTaskIndex
+INFO: Task index did not find.
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList addTask
+INFO: Task name does not exists. Adding starts
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList addTask
+INFO: Adding the first element
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList getTaskIndex
+INFO: Task index did not find.
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList addTask
+INFO: Task name does not exists. Adding starts
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList addTask
+INFO: Adding a task with an existing prority
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList getLastIndexOfCategory
+INFO: The first index was found
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList getLastIndexOfCategory
+INFO: The category does not exist
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList getTaskIndex
+INFO: Task index did not find.
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList addTask
+INFO: Task name does not exists. Adding starts
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList addTask
+INFO: Adding a task with an existing prority
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList getLastIndexOfCategory
+INFO: The first index was found
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList getLastIndexOfCategory
+INFO: The first index was found
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList getLastIndexOfCategory
+INFO: The category does not exist
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList getTaskIndex
+INFO: Task index did not find.
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList addTask
+INFO: Task name does not exists. Adding starts
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList addTask
+INFO: Adding a task with an existing prority
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList getLastIndexOfCategory
+INFO: The first index was found
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList getLastIndexOfCategory
+INFO: The first index was found
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList getLastIndexOfCategory
+INFO: The first index was found
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList getLastIndexOfCategory
+INFO: The category does not exist
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList getTaskIndex
+INFO: Task index did not find.
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList addTask
+INFO: Task name does not exists. Adding starts
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList addTask
+INFO: Adding a task with new prority
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList getLastIndexOfCategory
+INFO: The first index was found
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList getLastIndexOfCategory
+INFO: The first index was found
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList getLastIndexOfCategory
+INFO: The first index was found
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList getLastIndexOfCategory
+INFO: The first index was found
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList getLastIndexOfCategory
+INFO: The category does not exist
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList getTaskIndex
+INFO: Task index did not find.
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList addTask
+INFO: Task name does not exists. Adding starts
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList addTask
+INFO: Adding a task with an existing prority
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList getLastIndexOfCategory
+INFO: The first index was found
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList getLastIndexOfCategory
+INFO: The first index was found
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList getLastIndexOfCategory
+INFO: The first index was found
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList getLastIndexOfCategory
+INFO: The first index was found
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList getLastIndexOfCategory
+INFO: The category does not exist
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList getTaskIndex
+INFO: Task index did not find.
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList addTask
+INFO: Task name does not exists. Adding starts
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList addTask
+INFO: Adding a task with new prority
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList getLastIndexOfCategory
+INFO: The first index was found
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList getLastIndexOfCategory
+INFO: The first index was found
+ápr. 01, 2016 11:35:02 DU task.SimplyTaskList getLastIndexOfCategory
+INFO: The category does not exist
+</system-err>
   </testcase>
-  <testcase classname="Task.SimplyTaskListTest" name="Task.SimplyTaskListTest.testGetTaskCategory" time="0.006">
+  <testcase classname="task.SimplyTaskListTest" name="task.SimplyTaskListTest.testGetPriority" time="0.335">
     <failure message="org/junit/Assert" type="java.lang.NoClassDefFoundError">java.lang.NoClassDefFoundError: org/junit/Assert
-	at Task.SimplyTaskListTest.testGetTaskCategory(SimplyTaskListTest.java:159)
+	at task.SimplyTaskListTest.testGetPriority(SimplyTaskListTest.java:137)
 </failure>
+    <system-err>ápr. 01, 2016 11:35:03 DU task.SimplyTaskList getTaskIndex
+INFO: Task index did not find.
+ápr. 01, 2016 11:35:03 DU task.SimplyTaskList addTask
+INFO: Task name does not exists. Adding starts
+ápr. 01, 2016 11:35:03 DU task.SimplyTaskList addTask
+INFO: Adding the first element
+ápr. 01, 2016 11:35:03 DU task.SimplyTaskList getTaskIndex
+INFO: Task index did not find.
+ápr. 01, 2016 11:35:03 DU task.SimplyTaskList addTask
+INFO: Task name does not exists. Adding starts
+ápr. 01, 2016 11:35:03 DU task.SimplyTaskList addTask
+INFO: Adding a task with an existing prority
+ápr. 01, 2016 11:35:03 DU task.SimplyTaskList getLastIndexOfCategory
+INFO: The first index was found
+ápr. 01, 2016 11:35:03 DU task.SimplyTaskList getLastIndexOfCategory
+INFO: The category does not exist
+ápr. 01, 2016 11:35:03 DU task.SimplyTaskList getTaskIndex
+INFO: Task index did not find.
+ápr. 01, 2016 11:35:03 DU task.SimplyTaskList addTask
+INFO: Task name does not exists. Adding starts
+ápr. 01, 2016 11:35:03 DU task.SimplyTaskList addTask
+INFO: Adding a task with an existing prority
+ápr. 01, 2016 11:35:03 DU task.SimplyTaskList getLastIndexOfCategory
+INFO: The first index was found
+ápr. 01, 2016 11:35:03 DU task.SimplyTaskList getLastIndexOfCategory
+INFO: The first index was found
+ápr. 01, 2016 11:35:03 DU task.SimplyTaskList getLastIndexOfCategory
+INFO: The category does not exist
+ápr. 01, 2016 11:35:03 DU task.SimplyTaskList getTaskIndex
+INFO: Task index did not find.
+ápr. 01, 2016 11:35:03 DU task.SimplyTaskList addTask
+INFO: Task name does not exists. Adding starts
+ápr. 01, 2016 11:35:03 DU task.SimplyTaskList addTask
+INFO: Adding a task with an existing prority
+ápr. 01, 2016 11:35:03 DU task.SimplyTaskList getLastIndexOfCategory
+INFO: The first index was found
+ápr. 01, 2016 11:35:03 DU task.SimplyTaskList getLastIndexOfCategory
+INFO: The first index was found
+ápr. 01, 2016 11:35:03 DU task.SimplyTaskList getLastIndexOfCategory
+INFO: The first index was found
+ápr. 01, 2016 11:35:03 DU task.SimplyTaskList getLastIndexOfCategory
+INFO: The category does not exist
+ápr. 01, 2016 11:35:03 DU task.SimplyTaskList getTaskIndex
+INFO: Task index did not find.
+ápr. 01, 2016 11:35:03 DU task.SimplyTaskList addTask
+INFO: Task name does not exists. Adding starts
+ápr. 01, 2016 11:35:03 DU task.SimplyTaskList addTask
+INFO: Adding a task with new prority
+ápr. 01, 2016 11:35:03 DU task.SimplyTaskList getLastIndexOfCategory
+INFO: The first index was found
+ápr. 01, 2016 11:35:03 DU task.SimplyTaskList getLastIndexOfCategory
+INFO: The first index was found
+ápr. 01, 2016 11:35:03 DU task.SimplyTaskList getLastIndexOfCategory
+INFO: The first index was found
+ápr. 01, 2016 11:35:03 DU task.SimplyTaskList getLastIndexOfCategory
+INFO: The first index was found
+ápr. 01, 2016 11:35:03 DU task.SimplyTaskList getLastIndexOfCategory
+INFO: The category does not exist
+ápr. 01, 2016 11:35:03 DU task.SimplyTaskList getTaskIndex
+INFO: Task index did not find.
+ápr. 01, 2016 11:35:03 DU task.SimplyTaskList addTask
+INFO: Task name does not exists. Adding starts
+ápr. 01, 2016 11:35:03 DU task.SimplyTaskList addTask
+INFO: Adding a task with an existing prority
+ápr. 01, 2016 11:35:03 DU task.SimplyTaskList getLastIndexOfCategory
+INFO: The first index was found
+ápr. 01, 2016 11:35:03 DU task.SimplyTaskList getLastIndexOfCategory
+INFO: The first index was found
+ápr. 01, 2016 11:35:03 DU task.SimplyTaskList getLastIndexOfCategory
+INFO: The first index was found
+ápr. 01, 2016 11:35:03 DU task.SimplyTaskList getLastIndexOfCategory
+INFO: The first index was found
+ápr. 01, 2016 11:35:03 DU task.SimplyTaskList getLastIndexOfCategory
+INFO: The category does not exist
+ápr. 01, 2016 11:35:03 DU task.SimplyTaskList getTaskIndex
+INFO: Task index did not find.
+ápr. 01, 2016 11:35:03 DU task.SimplyTaskList addTask
+INFO: Task name does not exists. Adding starts
+ápr. 01, 2016 11:35:03 DU task.SimplyTaskList addTask
+INFO: Adding a task with new prority
+ápr. 01, 2016 11:35:03 DU task.SimplyTaskList getLastIndexOfCategory
+INFO: The first index was found
+ápr. 01, 2016 11:35:03 DU task.SimplyTaskList getLastIndexOfCategory
+INFO: The first index was found
+ápr. 01, 2016 11:35:03 DU task.SimplyTaskList getLastIndexOfCategory
+INFO: The category does not exist
+</system-err>
   </testcase>
-  <testcase classname="Task.SimplyTaskListTest" name="Task.SimplyTaskListTest.testGetLastPriorityInCategory" time="0.001">
+  <testcase classname="task.SimplyTaskListTest" name="task.SimplyTaskListTest.testSetListName" time="0.436">
     <failure message="org/junit/Assert" type="java.lang.NoClassDefFoundError">java.lang.NoClassDefFoundError: org/junit/Assert
-	at Task.SimplyTaskListTest.testGetLastPriorityInCategory(SimplyTaskListTest.java:125)
+	at task.SimplyTaskListTest.testSetListName(SimplyTaskListTest.java:178)
 </failure>
+    <system-err>ápr. 01, 2016 11:35:03 DU task.SimplyTaskList getTaskIndex
+INFO: Task index did not find.
+ápr. 01, 2016 11:35:03 DU task.SimplyTaskList addTask
+INFO: Task name does not exists. Adding starts
+ápr. 01, 2016 11:35:03 DU task.SimplyTaskList addTask
+INFO: Adding the first element
+ápr. 01, 2016 11:35:03 DU task.SimplyTaskList getTaskIndex
+INFO: Task index did not find.
+ápr. 01, 2016 11:35:03 DU task.SimplyTaskList addTask
+INFO: Task name does not exists. Adding starts
+ápr. 01, 2016 11:35:03 DU task.SimplyTaskList addTask
+INFO: Adding a task with an existing prority
+ápr. 01, 2016 11:35:03 DU task.SimplyTaskList getLastIndexOfCategory
+INFO: The first index was found
+ápr. 01, 2016 11:35:03 DU task.SimplyTaskList getLastIndexOfCategory
+INFO: The category does not exist
+ápr. 01, 2016 11:35:03 DU task.SimplyTaskList getTaskIndex
+INFO: Task index did not find.
+ápr. 01, 2016 11:35:03 DU task.SimplyTaskList addTask
+INFO: Task name does not exists. Adding starts
+ápr. 01, 2016 11:35:03 DU task.SimplyTaskList addTask
+INFO: Adding a task with an existing prority
+ápr. 01, 2016 11:35:03 DU task.SimplyTaskList getLastIndexOfCategory
+INFO: The first index was found
+ápr. 01, 2016 11:35:03 DU task.SimplyTaskList getLastIndexOfCategory
+INFO: The first index was found
+ápr. 01, 2016 11:35:03 DU task.SimplyTaskList getLastIndexOfCategory
+INFO: The category does not exist
+ápr. 01, 2016 11:35:03 DU task.SimplyTaskList getTaskIndex
+INFO: Task index did not find.
+ápr. 01, 2016 11:35:03 DU task.SimplyTaskList addTask
+INFO: Task name does not exists. Adding starts
+ápr. 01, 2016 11:35:03 DU task.SimplyTaskList addTask
+INFO: Adding a task with an existing prority
+ápr. 01, 2016 11:35:03 DU task.SimplyTaskList getLastIndexOfCategory
+INFO: The first index was found
+ápr. 01, 2016 11:35:03 DU task.SimplyTaskList getLastIndexOfCategory
+INFO: The first index was found
+ápr. 01, 2016 11:35:03 DU task.SimplyTaskList getLastIndexOfCategory
+INFO: The first index was found
+ápr. 01, 2016 11:35:03 DU task.SimplyTaskList getLastIndexOfCategory
+INFO: The category does not exist
+ápr. 01, 2016 11:35:03 DU task.SimplyTaskList getTaskIndex
+INFO: Task index did not find.
+ápr. 01, 2016 11:35:03 DU task.SimplyTaskList addTask
+INFO: Task name does not exists. Adding starts
+ápr. 01, 2016 11:35:03 DU task.SimplyTaskList addTask
+INFO: Adding a task with new prority
+ápr. 01, 2016 11:35:03 DU task.SimplyTaskList getLastIndexOfCategory
+INFO: The first index was found
+ápr. 01, 2016 11:35:03 DU task.SimplyTaskList getLastIndexOfCategory
+INFO: The first index was found
+ápr. 01, 2016 11:35:03 DU task.SimplyTaskList getLastIndexOfCategory
+INFO: The first index was found
+ápr. 01, 2016 11:35:03 DU task.SimplyTaskList getLastIndexOfCategory
+INFO: The first index was found
+ápr. 01, 2016 11:35:03 DU task.SimplyTaskList getLastIndexOfCategory
+INFO: The category does not exist
+ápr. 01, 2016 11:35:03 DU task.SimplyTaskList getTaskIndex
+INFO: Task index did not find.
+ápr. 01, 2016 11:35:03 DU task.SimplyTaskList addTask
+INFO: Task name does not exists. Adding starts
+ápr. 01, 2016 11:35:03 DU task.SimplyTaskList addTask
+INFO: Adding a task with an existing prority
+ápr. 01, 2016 11:35:03 DU task.SimplyTaskList getLastIndexOfCategory
+INFO: The first index was found
+ápr. 01, 2016 11:35:03 DU task.SimplyTaskList getLastIndexOfCategory
+INFO: The first index was found
+ápr. 01, 2016 11:35:03 DU task.SimplyTaskList getLastIndexOfCategory
+INFO: The first index was found
+ápr. 01, 2016 11:35:03 DU task.SimplyTaskList getLastIndexOfCategory
+INFO: The first index was found
+ápr. 01, 2016 11:35:03 DU task.SimplyTaskList getLastIndexOfCategory
+INFO: The category does not exist
+ápr. 01, 2016 11:35:03 DU task.SimplyTaskList getTaskIndex
+INFO: Task index did not find.
+ápr. 01, 2016 11:35:03 DU task.SimplyTaskList addTask
+INFO: Task name does not exists. Adding starts
+ápr. 01, 2016 11:35:03 DU task.SimplyTaskList addTask
+INFO: Adding a task with new prority
+ápr. 01, 2016 11:35:03 DU task.SimplyTaskList getLastIndexOfCategory
+INFO: The first index was found
+ápr. 01, 2016 11:35:03 DU task.SimplyTaskList getLastIndexOfCategory
+INFO: The first index was found
+ápr. 01, 2016 11:35:03 DU task.SimplyTaskList getLastIndexOfCategory
+INFO: The category does not exist
+</system-err>
   </testcase>
-  <testcase classname="Task.SimplyTaskListTest" name="Task.SimplyTaskListTest.testGetPriorityCategories" time="0.001">
+  <testcase classname="task.SimplyTaskListTest" name="task.SimplyTaskListTest.testSize" time="0.363">
     <failure message="org/junit/Assert" type="java.lang.NoClassDefFoundError">java.lang.NoClassDefFoundError: org/junit/Assert
-	at Task.SimplyTaskListTest.testGetPriorityCategories(SimplyTaskListTest.java:152)
+	at task.SimplyTaskListTest.testSize(SimplyTaskListTest.java:184)
 </failure>
-  </testcase>
-  <testcase classname="Task.SimplyTaskListTest" name="Task.SimplyTaskListTest.testGetLastIndexOfCategory" time="0.001">
-    <failure message="org/junit/Assert" type="java.lang.NoClassDefFoundError">java.lang.NoClassDefFoundError: org/junit/Assert
-	at Task.SimplyTaskListTest.testGetLastIndexOfCategory(SimplyTaskListTest.java:93)
-</failure>
+    <system-err>ápr. 01, 2016 11:35:03 DU task.SimplyTaskList getTaskIndex
+INFO: Task index did not find.
+ápr. 01, 2016 11:35:03 DU task.SimplyTaskList addTask
+INFO: Task name does not exists. Adding starts
+ápr. 01, 2016 11:35:03 DU task.SimplyTaskList addTask
+INFO: Adding the first element
+ápr. 01, 2016 11:35:03 DU task.SimplyTaskList getTaskIndex
+INFO: Task index did not find.
+ápr. 01, 2016 11:35:03 DU task.SimplyTaskList addTask
+INFO: Task name does not exists. Adding starts
+ápr. 01, 2016 11:35:03 DU task.SimplyTaskList addTask
+INFO: Adding a task with an existing prority
+ápr. 01, 2016 11:35:03 DU task.SimplyTaskList getLastIndexOfCategory
+INFO: The first index was found
+ápr. 01, 2016 11:35:03 DU task.SimplyTaskList getLastIndexOfCategory
+INFO: The category does not exist
+ápr. 01, 2016 11:35:03 DU task.SimplyTaskList getTaskIndex
+INFO: Task index did not find.
+ápr. 01, 2016 11:35:03 DU task.SimplyTaskList addTask
+INFO: Task name does not exists. Adding starts
+ápr. 01, 2016 11:35:03 DU task.SimplyTaskList addTask
+INFO: Adding a task with an existing prority
+ápr. 01, 2016 11:35:03 DU task.SimplyTaskList getLastIndexOfCategory
+INFO: The first index was found
+ápr. 01, 2016 11:35:03 DU task.SimplyTaskList getLastIndexOfCategory
+INFO: The first index was found
+ápr. 01, 2016 11:35:03 DU task.SimplyTaskList getLastIndexOfCategory
+INFO: The category does not exist
+ápr. 01, 2016 11:35:03 DU task.SimplyTaskList getTaskIndex
+INFO: Task index did not find.
+ápr. 01, 2016 11:35:03 DU task.SimplyTaskList addTask
+INFO: Task name does not exists. Adding starts
+ápr. 01, 2016 11:35:03 DU task.SimplyTaskList addTask
+INFO: Adding a task with an existing prority
+ápr. 01, 2016 11:35:03 DU task.SimplyTaskList getLastIndexOfCategory
+INFO: The first index was found
+ápr. 01, 2016 11:35:03 DU task.SimplyTaskList getLastIndexOfCategory
+INFO: The first index was found
+ápr. 01, 2016 11:35:03 DU task.SimplyTaskList getLastIndexOfCategory
+INFO: The first index was found
+ápr. 01, 2016 11:35:03 DU task.SimplyTaskList getLastIndexOfCategory
+INFO: The category does not exist
+ápr. 01, 2016 11:35:03 DU task.SimplyTaskList getTaskIndex
+INFO: Task index did not find.
+ápr. 01, 2016 11:35:03 DU task.SimplyTaskList addTask
+INFO: Task name does not exists. Adding starts
+ápr. 01, 2016 11:35:03 DU task.SimplyTaskList addTask
+INFO: Adding a task with new prority
+ápr. 01, 2016 11:35:03 DU task.SimplyTaskList getLastIndexOfCategory
+INFO: The first index was found
+ápr. 01, 2016 11:35:03 DU task.SimplyTaskList getLastIndexOfCategory
+INFO: The first index was found
+ápr. 01, 2016 11:35:03 DU task.SimplyTaskList getLastIndexOfCategory
+INFO: The first index was found
+ápr. 01, 2016 11:35:03 DU task.SimplyTaskList getLastIndexOfCategory
+INFO: The first index was found
+ápr. 01, 2016 11:35:03 DU task.SimplyTaskList getLastIndexOfCategory
+INFO: The category does not exist
+ápr. 01, 2016 11:35:03 DU task.SimplyTaskList getTaskIndex
+INFO: Task index did not find.
+ápr. 01, 2016 11:35:03 DU task.SimplyTaskList addTask
+INFO: Task name does not exists. Adding starts
+ápr. 01, 2016 11:35:03 DU task.SimplyTaskList addTask
+INFO: Adding a task with an existing prority
+ápr. 01, 2016 11:35:03 DU task.SimplyTaskList getLastIndexOfCategory
+INFO: The first index was found
+ápr. 01, 2016 11:35:03 DU task.SimplyTaskList getLastIndexOfCategory
+INFO: The first index was found
+ápr. 01, 2016 11:35:03 DU task.SimplyTaskList getLastIndexOfCategory
+INFO: The first index was found
+ápr. 01, 2016 11:35:03 DU task.SimplyTaskList getLastIndexOfCategory
+INFO: The first index was found
+ápr. 01, 2016 11:35:03 DU task.SimplyTaskList getLastIndexOfCategory
+INFO: The category does not exist
+ápr. 01, 2016 11:35:03 DU task.SimplyTaskList getTaskIndex
+INFO: Task index did not find.
+ápr. 01, 2016 11:35:03 DU task.SimplyTaskList addTask
+INFO: Task name does not exists. Adding starts
+ápr. 01, 2016 11:35:03 DU task.SimplyTaskList addTask
+INFO: Adding a task with new prority
+ápr. 01, 2016 11:35:03 DU task.SimplyTaskList getLastIndexOfCategory
+INFO: The first index was found
+ápr. 01, 2016 11:35:03 DU task.SimplyTaskList getLastIndexOfCategory
+INFO: The first index was found
+ápr. 01, 2016 11:35:03 DU task.SimplyTaskList getLastIndexOfCategory
+INFO: The category does not exist
+</system-err>
   </testcase>
 </testsuite>
