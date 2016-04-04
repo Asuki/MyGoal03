@@ -27,6 +27,8 @@ import java.awt.event.FocusAdapter;
 import java.awt.event.FocusEvent;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
+import javax.swing.GroupLayout;
+import javax.swing.GroupLayout.Alignment;
 
 public class GWin03 {
 
@@ -72,140 +74,99 @@ public class GWin03 {
     frmGwin.setTitle("GWin");
     frmGwin.setBounds(100, 100, 825, 480);
     frmGwin.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-    frmGwin.getContentPane().setLayout(new MigLayout("", "[grow]",
-        "[][][][][][][][][][grow][][][][][][][][][]"));
 
     Box horizontalBox_1 = Box.createHorizontalBox();
-    frmGwin.getContentPane().add(horizontalBox_1, "flowx,cell 0 0");
 
     Box horizontalBox_2 = Box.createHorizontalBox();
-    frmGwin.getContentPane().add(horizontalBox_2, "flowx,cell 0 1");
 
     Box horizontalBox_3 = Box.createHorizontalBox();
-    frmGwin.getContentPane().add(horizontalBox_3, "flowx,cell 0 4");
 
     JLabel label = new JLabel("P. category");
-    frmGwin.getContentPane().add(label, "flowx,cell 0 5");
 
     Box horizontalBox_4 = Box.createHorizontalBox();
-    frmGwin.getContentPane().add(horizontalBox_4, "flowx,cell 0 6 1 3");
 
     JScrollPane scrollPane = new JScrollPane();
-    frmGwin.getContentPane().add(scrollPane, "cell 0 9 1 9,grow");
 
     Box horizontalBox = Box.createHorizontalBox();
-    frmGwin.getContentPane().add(horizontalBox, "flowx,cell 0 18");
 
     JLabel lblTasks = new JLabel("Tasks: 0");
-    frmGwin.getContentPane().add(lblTasks, "cell 0 18");
 
     JLabel lblPriorCategory = new JLabel("P. category");
-    frmGwin.getContentPane().add(lblPriorCategory, "cell 0 0");
 
     JLabel lblPriority = new JLabel("                    Priority        ");
-    frmGwin.getContentPane().add(lblPriority, "cell 0 0");
 
     comboBoxPriorCat = new JComboBox<String>();
     comboBoxPriorCat.setMaximumRowCount(10);
-    frmGwin.getContentPane().add(comboBoxPriorCat, "cell 0 1");
 
     JCheckBox chckbxLastPriority = new JCheckBox("Last priority");
     chckbxLastPriority.setSelected(true);
-    frmGwin.getContentPane().add(chckbxLastPriority, "cell 0 1");
 
     textFieldPrior = new JTextField();
-    frmGwin.getContentPane().add(textFieldPrior, "cell 0 1");
     textFieldPrior.setColumns(6);
 
     JSeparator separator = new JSeparator();
-    frmGwin.getContentPane().add(separator, "cell 0 1");
 
     textFieldTaskName = new JTextField();
-    frmGwin.getContentPane().add(textFieldTaskName, "cell 0 1");
     textFieldTaskName.setColumns(20);
 
     textFieldTaskComment = new JTextField();
-    frmGwin.getContentPane().add(textFieldTaskComment, "cell 0 1");
     textFieldTaskComment.setColumns(35);
 
     JButton btnAdd = new JButton("Add");
-    frmGwin.getContentPane().add(btnAdd, "cell 0 1");
 
     Component horizontalGlue = Box.createHorizontalGlue();
-    frmGwin.getContentPane().add(horizontalGlue, "cell 0 1");
 
     JLabel lblTask = new JLabel(
         "   Task                                                           ");
-    frmGwin.getContentPane().add(lblTask, "cell 0 0");
 
     JLabel lblCommentsomeInformation = new JLabel(
         "   Comment (some information about the task)");
-    frmGwin.getContentPane().add(lblCommentsomeInformation, "cell 0 0");
 
     JComboBox<String> comboBoxPriorCatMod = new JComboBox<String>();
-    frmGwin.getContentPane().add(comboBoxPriorCatMod, "cell 0 8");
 
     // Filling up the comboboxes with the possible categories.
     fillCat(comboBoxPriorCat);
     fillCat(comboBoxPriorCatMod);
 
     Component verticalStrut_12 = Box.createVerticalStrut(20);
-    frmGwin.getContentPane().add(verticalStrut_12, "cell 0 8");
 
     Component verticalStrut_10 = Box.createVerticalStrut(20);
-    frmGwin.getContentPane().add(verticalStrut_10, "cell 0 8");
 
     Component verticalStrut_16 = Box.createVerticalStrut(20);
-    frmGwin.getContentPane().add(verticalStrut_16, "cell 0 8");
 
     Component verticalStrut_15 = Box.createVerticalStrut(20);
-    frmGwin.getContentPane().add(verticalStrut_15, "cell 0 8");
 
     Component verticalStrut_18 = Box.createVerticalStrut(20);
-    frmGwin.getContentPane().add(verticalStrut_18, "cell 0 8");
 
     Component verticalStrut_17 = Box.createVerticalStrut(20);
-    frmGwin.getContentPane().add(verticalStrut_17, "cell 0 8");
 
     Component verticalStrut_19 = Box.createVerticalStrut(20);
-    frmGwin.getContentPane().add(verticalStrut_19, "cell 0 8");
 
     Component verticalStrut_14 = Box.createVerticalStrut(20);
-    frmGwin.getContentPane().add(verticalStrut_14, "cell 0 8");
 
     Component verticalStrut_20 = Box.createVerticalStrut(20);
-    frmGwin.getContentPane().add(verticalStrut_20, "cell 0 8");
 
     Component verticalStrut_13 = Box.createVerticalStrut(20);
-    frmGwin.getContentPane().add(verticalStrut_13, "cell 0 8");
 
     Component verticalStrut_11 = Box.createVerticalStrut(20);
-    frmGwin.getContentPane().add(verticalStrut_11, "cell 0 8");
 
     textFieldPriorMod = new JTextField();
-    frmGwin.getContentPane().add(textFieldPriorMod, "cell 0 8");
     textFieldPriorMod.setColumns(6);
 
     textFieldTaskNameMod = new JTextField();
-    frmGwin.getContentPane().add(textFieldTaskNameMod, "cell 0 8");
     textFieldTaskNameMod.setColumns(20);
 
     textFieldTaskCommentMod = new JTextField();
-    frmGwin.getContentPane().add(textFieldTaskCommentMod, "cell 0 8");
     textFieldTaskCommentMod.setColumns(35);
 
     JButton btnModify = new JButton("Modify");
-    frmGwin.getContentPane().add(btnModify, "cell 0 8");
 
     JLabel label_1 = new JLabel("   Priority        ");
-    frmGwin.getContentPane().add(label_1, "cell 0 5");
 
     JLabel label_2 = new JLabel(
         "   Task                                                           ");
-    frmGwin.getContentPane().add(label_2, "cell 0 5");
 
     JLabel label_3 = new JLabel("   Comment (some information about the task)");
-    frmGwin.getContentPane().add(label_3, "cell 0 5");
 
     JMenuBar menuBar = new JMenuBar();
     frmGwin.setJMenuBar(menuBar);
@@ -338,6 +299,46 @@ public class GWin03 {
     table.getColumnModel().getColumn(4).setPreferredWidth(55);
     table.getColumnModel().getColumn(4).setMaxWidth(80);
     scrollPane.setViewportView(table);
+    frmGwin.getContentPane().setLayout(new MigLayout("", "[1px][1px][3px][28px][1px][3px][1px][3px][4px][1px][3px][1px][3px][4px][4px][1px][3px][1px][3px][1px][3px][1px][3px][43px][4px][7px][1px][46px][4px][1px][4px][114px][4px][35px][4px][9px][4px][38px][4px][192px][4px][48px][4px][149px]", "[1px][14px][23px][1px][14px][23px][255px][14px]"));
+    frmGwin.getContentPane().add(horizontalBox_1, "cell 1 1,alignx left,aligny center");
+    frmGwin.getContentPane().add(horizontalBox_2, "cell 1 2,alignx left,aligny center");
+    frmGwin.getContentPane().add(horizontalBox_3, "cell 1 3,alignx left,aligny top");
+    frmGwin.getContentPane().add(label, "cell 1 4 13 1,alignx left,aligny top");
+    frmGwin.getContentPane().add(horizontalBox_4, "cell 1 5,alignx left,aligny top");
+    frmGwin.getContentPane().add(scrollPane, "cell 1 6 43 1,grow");
+    frmGwin.getContentPane().add(horizontalBox, "cell 1 7,alignx left,aligny center");
+    frmGwin.getContentPane().add(lblTasks, "cell 3 7 6 1,alignx left,aligny top");
+    frmGwin.getContentPane().add(lblPriorCategory, "cell 3 1 12 1,alignx left,aligny top");
+    frmGwin.getContentPane().add(lblPriority, "cell 17 1 13 1,alignx left,aligny top");
+    frmGwin.getContentPane().add(comboBoxPriorCat, "cell 3 2,alignx left,aligny center");
+    frmGwin.getContentPane().add(chckbxLastPriority, "cell 6 2 18 1,alignx left,aligny top");
+    frmGwin.getContentPane().add(textFieldPrior, "cell 25 2 3 1,alignx left,aligny center");
+    frmGwin.getContentPane().add(separator, "cell 29 2,growx,aligny center");
+    frmGwin.getContentPane().add(textFieldTaskName, "cell 31 2 5 1,alignx left,aligny center");
+    frmGwin.getContentPane().add(textFieldTaskComment, "cell 37 2 5 1,alignx left,aligny center");
+    frmGwin.getContentPane().add(btnAdd, "cell 43 2,alignx left,aligny top");
+    frmGwin.getContentPane().add(horizontalGlue, "cell 0 0,alignx left,aligny top");
+    frmGwin.getContentPane().add(lblTask, "cell 31 1 7 1,alignx left,aligny top");
+    frmGwin.getContentPane().add(lblCommentsomeInformation, "cell 39 1 3 1,alignx left,aligny top");
+    frmGwin.getContentPane().add(comboBoxPriorCatMod, "cell 1 5 3 1,alignx left,aligny center");
+    frmGwin.getContentPane().add(verticalStrut_12, "cell 4 5,growx,aligny center");
+    frmGwin.getContentPane().add(verticalStrut_10, "cell 6 5,growx,aligny center");
+    frmGwin.getContentPane().add(verticalStrut_16, "cell 8 5,growx,aligny center");
+    frmGwin.getContentPane().add(verticalStrut_15, "cell 9 5,growx,aligny center");
+    frmGwin.getContentPane().add(verticalStrut_18, "cell 11 5,growx,aligny center");
+    frmGwin.getContentPane().add(verticalStrut_17, "cell 13 5,growx,aligny center");
+    frmGwin.getContentPane().add(verticalStrut_19, "cell 14 5,growx,aligny center");
+    frmGwin.getContentPane().add(verticalStrut_14, "cell 15 5,growx,aligny center");
+    frmGwin.getContentPane().add(verticalStrut_20, "cell 17 5,growx,aligny center");
+    frmGwin.getContentPane().add(verticalStrut_13, "cell 19 5,growx,aligny center");
+    frmGwin.getContentPane().add(verticalStrut_11, "cell 21 5,growx,aligny center");
+    frmGwin.getContentPane().add(textFieldPriorMod, "cell 23 5 3 1,alignx left,aligny center");
+    frmGwin.getContentPane().add(textFieldTaskNameMod, "cell 27 5 5 1,alignx right,aligny center");
+    frmGwin.getContentPane().add(textFieldTaskCommentMod, "cell 33 5 7 1,alignx left,aligny center");
+    frmGwin.getContentPane().add(btnModify, "cell 41 5 3 1,alignx left,aligny top");
+    frmGwin.getContentPane().add(label_1, "cell 15 4 11 1,alignx left,aligny top");
+    frmGwin.getContentPane().add(label_2, "cell 27 4 7 1,alignx left,aligny top");
+    frmGwin.getContentPane().add(label_3, "cell 35 4 5 1,alignx left,aligny top");
 
     JMenuItem mntmLoad = new JMenuItem("Load");
     mntmLoad.addActionListener(new ActionListener() {

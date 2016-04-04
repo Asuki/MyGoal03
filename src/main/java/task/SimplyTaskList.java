@@ -453,92 +453,78 @@ public class SimplyTaskList {
    */
   public final boolean addTask(final String pcat, final Integer prior,
       final String task, final String comment) {
-    logger.entering("SimlyTaskList", "addTask",
-        new Object[] {pcat, prior, task, comment});
-    if (-1 == getTaskIndex(task)) {
-      logger.info("Task name does not exists. Adding starts");
-      // It checks if has task in the list
-      if (tasks.size() > 0) {
-        // If the category of the new task is exists
-        if (isUsedCategory(pcat)) {
-          logger.info("Adding a task " + "with an existing prority");
-          // Sets the previous category's
-          // last priority index
-          Integer indexTmp = getPrevCatIndex(pcat);
-          if (indexTmp < 0) {
-            indexTmp = 0;
-          }
-          Integer lastLower = getLastIndexOfCategory(
-              priorityCategories.get(indexTmp));
-          // Increasing all of the task's
-          // priority with equal
-          // or higher priority.
-          for (int i = 0; i < priority.size(); i++) {
-            if (priority.get(i) >= prior && pcat.equals(priorCat.get(i))) {
-              priority.set(i, priority.get(i) + 1);
-              if (pcat.equals(priorCat.get(i)) && priority.get(i) < prior) {
-                lastLower = i;
-              }
-            }
-          }
-          // Inserting the task, its priority
-          // and category into the right place.
-          if (pcat.equals(priorityCategories.get(0)) && 1 == prior) {
-            lastLower = 0;
-          } else {
-            lastLower = lastLower + 1;
-          }
-          tasks.add(lastLower, new SimplyTask(task));
-          tasks.get(lastLower).setComment(comment);
-          priorCat.add(lastLower, pcat);
-          priority.add(lastLower, prior);
-          logger.fine(
-              "New priority category " + "was successful created: " + pcat);
-          logger.fine("The new task was" + " successful added: " + task);
+    // Adding successful - There is task with the same name
+    if (getTaskIndex(task) == -1) {
+      if (!isUsedCategory(pcat)) {
+        if (tasks.size() == 0) { // Adding the first item
+          tasks.add(new SimplyTask(task, comment));
+          this.priority.add(prior);
+          this.priorCat.add(pcat);
         } else {
-        // If the category of the new task
-        // does not exists
-          logger.info("Adding a task with new prority");
-          Integer indexTmp = priorityCategories.indexOf(pcat);
-          isUsedCat.set(indexTmp, 1);
-          Integer catIndexTmp = getPrevCatIndex(pcat);
-          // If has priority category before the new task's category,
-          // we insert the new task after the previous category.
-          if (catIndexTmp != -1) {
-            Integer addIndextmp = getLastIndexOfCategory(
-                priorityCategories.get(catIndexTmp)) + 1;
-            tasks.add(addIndextmp, new SimplyTask(task));
-            priorCat.add(addIndextmp, pcat);
-            priority.add(addIndextmp, prior);
-          } else {
-          // If has no priority category
-          // before the new task's category,
-          // we insert the new task before the next category.
-            catIndexTmp = getNextCatIndex(pcat);
-            Integer addIndextmp = getFirstIndexOfCategory(
-                priorityCategories.get(catIndexTmp)) - 1;
-            tasks.add(addIndextmp, new SimplyTask(task));
-            priorCat.add(addIndextmp, pcat);
-            priority.add(addIndextmp, prior);
+          // Getting the previous category
+          int index = getPrevCatIndex(pcat);
+          if (index == -1) {
+            index = 0;
           }
-          logger.fine(
-              "Task successful " + "inserted into the " + pcat + " category");
+          // Getting the previous category's last index
+          index = getLastIndexOfCategory(priorityCategories.get(index));
+          if (index == -1) {
+            index = 0;
+          }
+          // Inserting the element
+          index++;
+          tasks.add(index, new SimplyTask(task, comment));
+          priority.add(index, prior);
+          priorCat.add(index, pcat);
         }
-      } else {
-      // If there is no item in the list
-        logger.info("Adding the first element");
-        tasks.addFirst(new SimplyTask(task));
-        priorCat.addFirst(pcat);
-        priority.addFirst(prior);
         isUsedCat.set(priorityCategories.indexOf(pcat), 1);
-        tasks.getFirst().setComment(comment);
-        logger.fine("Adding the first element " + "was successful");
+      } else {
+        // Inserting the item
+        int firstTaskIndex = getFirstIndexOfCategory(pcat);
+        int lastTaskIndex = getLastIndexOfCategory(pcat);
+        int inc = -1;
+        boolean inserted = false;
+        int tmp;
+        // Searching the task's place
+        for (int i = firstTaskIndex; i <= lastTaskIndex; i++) {
+          tmp = priority.get(i);
+          if (prior < tmp) {
+            tasks.add(i, new SimplyTask(task, comment));
+            priority.add(i, prior);
+            priorCat.add(i, pcat);
+            inserted = true;
+            break;
+          }
+          if (prior == tmp) {
+            tasks.add(i, new SimplyTask(task, comment));
+            priority.add(i, prior);
+            priorCat.add(i, pcat);
+            inserted = true;
+            inc = i + 1;
+            break;
+          }
+        }
+        lastTaskIndex++;
+        // If there are tasks after the new task, than we increase them
+        // priorities
+        if (inc > -1) {
+          for (int i = inc; i <= lastTaskIndex; i++) {
+            priority.set(i, priority.get(i) + 1);
+          }
+        }
+        if (!inserted) {
+          tasks.add(lastTaskIndex, new SimplyTask(task, comment));
+          priority.add(lastTaskIndex, prior);
+          priorCat.add(lastTaskIndex, pcat);
+        }
       }
       return true;
+    } else { // Adding failed - The task name is already exists
+      return false;
     }
-    return false;
   }
-
+  
+  
   /**
    * Gives the index of the previous category from the priorityCategories list.
    *
@@ -560,7 +546,8 @@ public class SimplyTaskList {
    *
    * @param cat
    *          The category what's ancestor we search.
-   * @return The index of the previous category and -1 otherwise.
+   * @return The index of the previous category and -1 if does not have previous
+   *         category
    */
   public final Integer getPrevCatIndex(final String cat) {
     logger.entering("SimplyTaskList", "getPrevCatIndex", new Object[] {cat});
@@ -635,7 +622,8 @@ public class SimplyTaskList {
     logger.entering("SimplyTaskList", "getFirstIndexOfCategory",
         new Object[] {category});
     for (int i = 0; i < priorCat.size(); i++) {
-      if (priorCat.get(i) == category) {
+      // If the category equals we find the first index
+      if (category.equals(priorCat.get(i))) {
         logger.info("The first index was found");
         logger.exiting("SimplyTaskList", "getFirstIndexOfCategory", i);
         return i;

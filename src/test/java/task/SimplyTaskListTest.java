@@ -184,6 +184,15 @@ public class SimplyTaskListTest {
 		assertEquals(taskList.size(), 7);
 	}
 	
+	@Test
+  public void testLoad() throws Exception {
+    SimplyTaskList taskLoad = new SimplyTaskList("loadTest");
+    taskLoad.loadXML();
+    assertEquals(taskLoad.getTaskName(2), "Convergence");
+    assertEquals(taskLoad.getCategory(2), A);
+    assertEquals(taskLoad.getPriority(2), 3);
+  }
+	
 	public SimplyTaskList createSomeTask(){
 		SimplyTaskList result = new SimplyTaskList("test");
 		for (int i = 0; i < 4; i++) {
